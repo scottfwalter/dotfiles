@@ -1,11 +1,35 @@
+# import = [
+# "~/.config/alacritty/base16-dark.toml",
+# "~/.config/alacritty/keybindings.toml",
+# ]
+
+import = [
+#"~/.config/alacritty/themes/themes/afterglow.toml"
+#"~/.config/alacritty/themes/themes/alabaster_dark.toml"
+#"~/.config/alacritty/themes/themes/argonaut.toml"
+#"~/.config/alacritty/themes/themes/aura.toml"
+"~/.config/alacritty/themes/themes/tokyo-night.toml"
+#"~/.config/alacritty/themes/themes/smoooooth.toml"
+#"~/.config/alacritty/themes/themes/pastel_dark.toml"
+#"~/.config/alacritty/themes/themes/solarized_osaka.toml"
+]
+
 [window]
-
-opacity = 0.4
-
+opacity = 0.9
 padding.x = 10
 padding.y = 10
 
+
+#startup_mode = "SimpleFullScreen"
+#startup_mode = "FullScreen"
+startup_mode = "Windowed"
+title = "Alacritty"
+dynamic_title = true
+#blur = true
+
 decorations = "Full"
+#decorations = "None"
+#decorations = "Buttonless"
 decorations_theme_variant = "Dark" # "Dark"
 
 [cursor]
@@ -16,10 +40,20 @@ thickness = 0.15
 
 [font]
 
-normal.family = "Cascadia Code PL"
-bold.family = "Cascadia Code PL"
-italic.family = "Cascadia Code PL"
-bold_italic.family = "Cascadia Code PL"
+normal.family = "0xProto Nerd Font Mono"
+bold.family = "0xProto Nerd Font Mono"
+italic.family = "0xProto Nerd Font Mono"
+bold_italic.family = "0xProto Nerd Font Mono"
 
 size = 15.0
+
+[shell]
+program = "/bin/zsh"  # Example for Linux/BSD/macOS
+args = ["-l", "-c", "source ~/.zshrc && tmux attach || tmux"]
+#program = "/opt/homebrew/bin/tmux attach"
+#program = "/bin/zsh -l -c /opt/homebrew/bin/tmux attach || /opt/homebrew/bin/tmux"
+#program = "/opt/homebrew/bin/tmux attach || /opt/homebrew/bin/tmux"
+#program = "/bin/zsh1"
+#args = ["-l"]
+#args = ["-l", "-c tmux"]
 
