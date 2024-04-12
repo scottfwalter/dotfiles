@@ -132,8 +132,8 @@ function hostip() {
 ##########################
 function checksetup() {
 	echo "Checking setup..."
-	if [ ! -f ~/.checksetup.txt ]; then
-		echo "~/.checksetup.txt not found.  Cannot continue!"
+	if [ ! -f ~/.package.lst ]; then
+		echo "~/.package.lst not found.  Cannot continue!"
 		return 1
 
 	fi
@@ -145,6 +145,6 @@ function checksetup() {
 		else
 			echo -e "\xE2\x9D\x8C $p missing.\n"
 		fi
-	done < ~/.checksetup.txt
+	done < ~/.package.lst
 	echo "...setup check completed."
 }
