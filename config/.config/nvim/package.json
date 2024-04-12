@@ -1,0 +1,11 @@
+{
+  "name": "custom-snippets",
+    "contributes": {
+      "snippets": [
+        {
+          "language": ["javascript", "typescript"],
+          "path": "snippets/forloop.json"
+        }
+      ]
+    }
+  }

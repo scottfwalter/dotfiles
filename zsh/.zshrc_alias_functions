@@ -1,0 +1,150 @@
+##########################
+# CORE
+##########################
+alias awk="gawk"
+alias cat="bat"
+alias cwd="pwd | pbcopy"
+alias edit-git-config="git config --global --edit"
+alias enginx='code /opt/homebrew/etc/nginx/nginx.conf'
+alias eobsidian="code \"/Users/scott/Library/Mobile Documents/iCloud~md~obsidian/Documents/My Second Brain\""
+alias jj='pbpaste | jsonpp | pbcopy'
+alias jjj='pbpaste | jsonpp'
+alias ll="exa --icons --group-directories-first -l"
+alias ls="exa --icons --group-directories-first"
+alias o='open "$(fzf)"'
+alias sed="gsed"
+alias weather="curl https://wttr.in"
+alias zreload=". ~/.zshrc"
+
+function on_mac() {
+	[[ $(uname -a | grep -c "Darwin") -eq 1 ]]
+}
+
+function on_wsl() {
+	[[ $(uname -a | grep -c "Microsoft") -eq 1 ]]
+}
+
+function mkd {
+  mkdir -p $1
+  cd $1
+}
+
+function fzf-dir {
+	find "$1" -type f | fzf
+}
+
+##########################
+# Pretty Output
+##########################
+
+# echo in green
+function ohai() {
+	local green='\033[0;32m'
+	local reset='\033[0m'
+	local msg="${1}"
+
+	echo -e "${green}${msg}${reset}"
+}
+
+# color echo
+function cecho() {
+    text=${1:-hello}
+    foreground=${2:-39}
+    background=${3:-49}
+    effect=${4:-22}
+
+
+    echo -e -n "\e[${foreground};${background};${effect}m$text"
+}
+
+
+
+# Set shell title useful in multi-tab terminal apps
+function title() {
+    echo -n -e "\033]0;$1\007"
+}
+
+##########################
+# Process and Ports
+##########################
+
+# Kills process by a grep syntax
+function killbygrep() {
+   ps -ef | grep $1 | grep -v grep | awk '{print $2}' | xargs kill -9
+}
+
+fp() {
+    ps Ao pid,comm|awk '{match($0,/[^\/]+$/); print substr($0,RSTART,RLENGTH)": "$1}'|grep -i $1|grep -v grep
+}
+
+
+#Kill Port
+function killbyport() {
+    lsof -i :$1 | tail -n+2 | awk '{ print $2 }' | xargs kill
+}
+
+# What is using a particular port
+function usingport() {
+	sudo lsof -iTCP:$1 -sTCP:LISTEN
+}
+
+# Check if a port is in use
+function portused() {
+    #count=$(lsof -P | grep ":$1" | wc -l)
+    count=$(netstat -an | grep $1 | wc -l)
+
+    if [ $count -eq 0 ]
+    then
+        echo "Port not in use"
+    else
+        echo "Port in use"
+    fi
+}
+
+##########################
+# Networking
+##########################
+#get the ip address of a host
+function hostip() {
+  host $1|grep " has address "|cut -d" " -f4
+}
+
+##########################
+# File and Directory
+##########################
+ function fs() {
+    if du -b /dev/null > /dev/null 2>&1; then
+        local arg=-sbh
+    else
+        local arg=-sh
+    fi
+
+    if [[ -n "$@" ]]; then
+        du $arg -- "$@"
+    else
+        du $arg .[^.]* *
+    fi
+}
+
+
+##########################
+# Check Setup
+##########################
+function checksetup() {
+	echo "Checking setup..."
+	if [ ! -f ~/.checksetup.txt ]; then
+		echo "~/.checksetup.txt not found.  Cannot continue!"
+		return 1
+
+	fi
+	while read p; do
+		if command -v $p > /dev/null; then
+			#echo -e "\xE2\x9C\x94 $p found.\n"
+			#echo -e "\u2705 $p found.\n"
+			:
+		else
+			echo -e "\xE2\x9D\x8C $p missing.\n"
+		fi
+	done < ~/.checksetup.txt
+	echo "...setup check completed."
+}

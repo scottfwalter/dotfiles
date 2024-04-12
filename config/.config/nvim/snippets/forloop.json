@@ -1,0 +1,9 @@
+{
+  "Scott": {
+    "prefix": [
+      "scott"
+    ],
+    "body": ["for (const ${1:element} of ${2:array}) {", "\t$0", "}"],
+    "description": "A for loop."
+  }
+}

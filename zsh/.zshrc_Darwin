@@ -1,0 +1,61 @@
+if [ "`uname -m`"  = 'arm64' ]; then
+    export BREW_PREFIX="/opt/homebrew"
+else
+    export BREW_PREFIX="/usr/local"
+fi
+#integrate with iTerm
+
+test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh" || true
+
+#show apple banner
+if [[ ! "$TERM_PROGRAM" == "vscode" ]]; then
+    archey -c -o
+fi
+
+
+function cdf() { # short for `cdfinder`
+    cd "$(osascript -e 'tell app "Finder" to POSIX path of (insertion location as alias)')"
+}
+
+#######################################
+# ITERM
+#######################################
+function badge {
+	printf "\e]1337;SetBadgeFormat=%s\a"   $(echo -n "$1" | base64)
+}
+
+#######################################
+# Tagging
+#######################################
+# List files with specified Finder tags in current directory and subdirectories
+lst() {
+    local query
+    # if the first argument is "all" (case insensitive),
+
+    bool="OR"
+    [[ $1 =~ "all" ]] && bool="AND" && shift
+
+    # if there's no argument or the argument is "+"
+    # list all files with any tags
+    if [[ -z $1 || $1 == "+" ]]; then
+        query="kMDItemUserTags == '*'"
+
+    # if the first argument is "-"
+    #	# list only files without tags
+    elif [[ $1 == "-" ]]; then
+        query="kMDItemUserTags != '*'"
+
+    # Otherwise, build a Spotlight syntax query string
+    else
+        query="tag:$1"
+        shift
+        for tag in $@; do
+            query="$query $bool tag:$tag"
+        done
+    fi
+
+    while IFS= read -r -d $'\0' line; do
+        echo ${line#`pwd`/}
+    done < <(mdfind -onlyin . -0 "$query")
+}
+

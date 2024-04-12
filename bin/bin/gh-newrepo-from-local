@@ -1,0 +1,42 @@
+#! /bin/bash
+USERNAME=$( op item get "Github (Personal)" --fields "username" )
+if [ $? -eq 1 ]
+then
+    exit 1
+fi
+
+read -p "Username [$USERNAME]: " input
+USERNAME=${input:-$USERNAME}
+
+TOKEN=$( op item get "Github (Personal)" --fields "Access Token" )
+if [ $? -eq 1 ]
+then
+    exit 1
+fi
+
+echo "Received token from 1P $TOKEN"
+
+DIR=$(basename `pwd`)
+echo $DIR
+
+DATA=`cat <<EOF
+{"name":"${DIR}"}
+EOF
+`
+
+echo $DATA
+
+curl -u $USERNAME:$TOKEN https://api.github.com/user/repos --data "$DATA"
+
+git init
+git add .
+git commit -m "first commit"
+git remote add origin https://$USERNAME:$TOKEN@github.com/scottfwalter/$DIR.git
+git push -u origin main
+
+
+
+
+
+
+

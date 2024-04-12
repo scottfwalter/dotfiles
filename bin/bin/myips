@@ -1,0 +1,19 @@
+#!/bin/bash
+INTERFACES=$(networksetup -listallhardwareports | grep -B 2 "Ethernet Address: [a-f]*" | grep -v -E '(Ethernet|\-\-)' | cut -d":" -f2 | paste -s -d" " -)
+
+# Parse through interfaces
+for interface in $INTERFACES
+do
+	CMD_OUT=$(ifconfig $interface inet 2>&1 | grep -v -E '(option|flags)' | cut -d" " -f2)
+	if [ -z $CMD_OUT ]; then
+		error=""
+	else
+		if [ $CMD_OUT = "interface" ]; then
+			error=""
+		else
+			echo "$(networksetup -listallhardwareports | grep -B 1 "Device: $interface" | grep "Hardware Port" | cut -d":" -f2) ($interface) $CMD_OUT"
+		fi
+	fi
+done
+echo " Public Facing $(dig +short myip.opendns.com @resolver1.opendns.com)"
+

@@ -1,0 +1,19 @@
+#!/bin/bash
+
+BACKUP_PATH="/Volumes/Media 02/Backups/DiskImages"
+
+function backupimage() {
+    source_filename="$HOME/$1"
+    filename=$(basename -- "$source_filename")
+    extension="${filename##*.}"
+    filename="${filename%.*}"
+
+    #date=`date -r "$source_filename" "+%m-%d-%Y-%H-%M-%S"`
+    date=`date "+%m-%d-%Y-%H-%M-%S"`
+    echo "copy $source_filename to $BACKUP_PATH/$filename-$date.$extension"
+    cp -R "$source_filename" "$BACKUP_PATH/$filename-$date.$extension"
+    ls -tp "$BACKUP_PATH/$filename-"* | grep -v '/$' | tail -n +5 |  tr '\n' '\0' |  xargs -0 rm --
+}
+
+backupimage "Jedi-Temple-Archives.sparseimage"
+#backupimage "Holocron-Messages.sparsebundle"

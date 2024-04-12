@@ -1,0 +1,33 @@
+#! /bin/bash
+USERNAME="scottfwalter"
+
+read -p "Repo Name: " REPO
+
+read -p "Username [$USERNAME]: " input
+USERNAME=${input:-$USERNAME}
+
+read -p "Auth Token: " TOKEN
+
+mkdir $REPO
+rc=$?;
+
+if [ $rc -eq 1 ]
+then
+   echo "Directory already exists.  Exiting..."
+   exit 1;
+fi
+
+cd $REPO
+git init
+echo "# $REPO" >> README.md
+git add README.md
+git commit -m "first commit"
+git branch -M main
+git remote add origin https://$USERNAME:$TOKEN@github.com/$USERNAME/$REPO.git
+git push -u origin main
+
+
+
+
+
+
