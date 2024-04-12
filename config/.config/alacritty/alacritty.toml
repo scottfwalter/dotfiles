@@ -1,0 +1,25 @@
+[window]
+
+opacity = 0.4
+
+padding.x = 10
+padding.y = 10
+
+decorations = "Full"
+decorations_theme_variant = "Dark" # "Dark"
+
+[cursor]
+style = { shape = "Block", blinking = "On" }
+blink_interval = 600
+unfocused_hollow = true
+thickness = 0.15
+
+[font]
+
+normal.family = "Cascadia Code PL"
+bold.family = "Cascadia Code PL"
+italic.family = "Cascadia Code PL"
+bold_italic.family = "Cascadia Code PL"
+
+size = 15.0
+
