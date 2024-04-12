@@ -1,0 +1,32 @@
+---
+- name: Configure host.
+  hosts: localhost
+
+  vars_files:
+    - default.config.yml
+
+  vars:
+      app_path: hello.txt
+
+  pre_tasks:
+    - name: Include playbook configuration.
+      include_vars: "{{ item }}"
+      with_fileglob:
+        - "{{ playbook_dir }}/config.yml"
+      tags: ['always']
+
+  roles:
+    - role: elliotweiser.osx-command-line-tools
+    - role: geerlingguy.mac.homebrew
+      tags: ['homebrew']
+
+  tasks:
+    - name: Debug output
+      debug:
+        msg:
+          var1: "{{ app_path }}"
+          var2: "{{ downloads }}"
+
+    - name: Write some file
+      ansible.builtin.shell: echo "scott" >> ~/{{app_path}}
+
