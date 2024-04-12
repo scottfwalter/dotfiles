@@ -1,0 +1,16 @@
+#!/bin/bash
+
+echo "post checkout2"
+
+changed_files="$(git diff-tree -r --name-only --no-commit-id ORIG_HEAD HEAD)"
+#changed_files="$(git diff-tree -r --name-only --no-commit-id $1 $2)"
+
+check_run() {
+  echo "$changed_files" | grep -E --quiet "$1" && eval "$2"
+}
+
+#check_run bower.json "bower install && bower prune"
+#bower install && bower prune
+
+#check_run package.json "npm install"
+#npm install

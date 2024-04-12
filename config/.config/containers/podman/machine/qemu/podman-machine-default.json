@@ -1,0 +1,88 @@
+{
+ "ConfigPath": {
+  "Path": "/Users/scott/.config/containers/podman/machine/qemu/podman-machine-default.json"
+ },
+ "CmdLine": [
+  "/opt/homebrew/bin/qemu-system-aarch64",
+  "-m",
+  "8192",
+  "-smp",
+  "2",
+  "-fw_cfg",
+  "name=opt/com.coreos/config,file=/Users/scott/.config/containers/podman/machine/qemu/podman-machine-default.ign",
+  "-qmp",
+  "unix:/var/folders/3j/1fg9_yln15x8hmvc1h08lfbw0000gn/T/podman/qmp_podman-machine-default.sock,server=on,wait=off",
+  "-netdev",
+  "socket,id=vlan,fd=3",
+  "-device",
+  "virtio-net-pci,netdev=vlan,mac=5a:94:ef:e4:0c:ee",
+  "-device",
+  "virtio-serial",
+  "-chardev",
+  "socket,path=/var/folders/3j/1fg9_yln15x8hmvc1h08lfbw0000gn/T/podman/podman-machine-default_ready.sock,server=on,wait=off,id=apodman-machine-default_ready",
+  "-device",
+  "virtserialport,chardev=apodman-machine-default_ready,name=org.fedoraproject.port.0",
+  "-pidfile",
+  "/var/folders/3j/1fg9_yln15x8hmvc1h08lfbw0000gn/T/podman/podman-machine-default_vm.pid",
+  "-accel",
+  "hvf",
+  "-accel",
+  "tcg",
+  "-cpu",
+  "host",
+  "-M",
+  "virt,highmem=on",
+  "-drive",
+  "file=/opt/homebrew/Cellar/qemu/7.2.0/share/qemu/edk2-aarch64-code.fd,if=pflash,format=raw,readonly=on",
+  "-drive",
+  "file=/Users/scott/.local/share/containers/podman/machine/qemu/podman-machine-default_ovmf_vars.fd,if=pflash,format=raw",
+  "-virtfs",
+  "local,path=/Volumes/T16-Skyhopper/cxone/tools/container-platform-frontend/,mount_tag=vol0,security_model=none",
+  "-drive",
+  "if=virtio,file=/Users/scott/.local/share/containers/podman/machine/qemu/podman-machine-default_fedora-coreos-37.20230322.2.0-qemu.aarch64.qcow2"
+ ],
+ "Rootful": true,
+ "UID": 501,
+ "IgnitionFilePath": {
+  "Path": "/Users/scott/.config/containers/podman/machine/qemu/podman-machine-default.ign"
+ },
+ "ImageStream": "testing",
+ "ImagePath": {
+  "Path": "/Users/scott/.local/share/containers/podman/machine/qemu/podman-machine-default_fedora-coreos-37.20230322.2.0-qemu.aarch64.qcow2"
+ },
+ "Mounts": [
+  {
+   "ReadOnly": false,
+   "Source": "/Volumes/T16-Skyhopper/cxone/tools/container-platform-frontend/",
+   "Tag": "vol0",
+   "Target": "/mnt/host-files",
+   "Type": "9p"
+  }
+ ],
+ "Name": "podman-machine-default",
+ "PidFilePath": {
+  "Path": "/var/folders/3j/1fg9_yln15x8hmvc1h08lfbw0000gn/T/podman/podman-machine-default_proxy.pid"
+ },
+ "VMPidFilePath": {
+  "Path": "/var/folders/3j/1fg9_yln15x8hmvc1h08lfbw0000gn/T/podman/podman-machine-default_vm.pid"
+ },
+ "QMPMonitor": {
+  "Address": {
+   "Path": "/var/folders/3j/1fg9_yln15x8hmvc1h08lfbw0000gn/T/podman/qmp_podman-machine-default.sock"
+  },
+  "Network": "unix",
+  "Timeout": 2000000000
+ },
+ "ReadySocket": {
+  "Path": "/var/folders/3j/1fg9_yln15x8hmvc1h08lfbw0000gn/T/podman/podman-machine-default_ready.sock"
+ },
+ "CPUs": 2,
+ "DiskSize": 100,
+ "Memory": 8192,
+ "IdentityPath": "/Users/scott/.ssh/podman-machine-default",
+ "Port": 62563,
+ "RemoteUsername": "core",
+ "Starting": false,
+ "Created": "2023-03-27T13:33:49.813416-05:00",
+ "LastUp": "2023-04-04T21:16:52.509783-05:00"
+}

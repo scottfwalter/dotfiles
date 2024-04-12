@@ -1,0 +1,7 @@
+#! /bin/bash
+DOCS="/Users/$USER/Library/Mobile Documents/com~apple~CloudDocs/MyDocuments"
+chflags hidden "$DOCS/Adobe"
+chflags hidden "$DOCS/ScanSnap Home folder"
+chflags hidden "$DOCS/ePhoto_Doc"
+chflags hidden "$DOCS/LrClassicLogs"
+

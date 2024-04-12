@@ -1,0 +1,186 @@
+#############################
+# ZSH Colors
+#############################
+export CC_BOLD="1"
+export CC_DIM="2"
+export CC_UNDERLINE="4"
+export CC_BLINK="5"
+export CC_REVERSE="7"
+export CC_HIDDEN="8"
+
+export CC_FG_DEFAULT="39"
+export CC_FG_BLACK="30"
+export CC_FG_RED="31"
+export CC_FG_GREEN="32"
+export CC_FG_YELLOW="33"
+export CC_FG_BLUE="34"
+export CC_FG_MAGENTA="35"
+export CC_FG_CYAN="36"
+export CC_FG_LIGHT_GRAY="37"
+export CC_FG_DARK_GRAY="90"
+export CC_FG_LIGHT_RED="91"
+export CC_FG_LIGHT_GREEN="92"
+export CC_FG_LIGHT_YELLOW="93"
+export CC_FG_LIGHT_BLUE="94"
+export CC_FG_LIGHT_MAGENTA="95"
+export CC_FG_LIGHT_CYAN="97"
+
+
+export CC_BG_DEFAULT="39"
+export CC_BG_BLACK="30"
+export CC_BG_RED="31"
+export CC_BG_GREEN="32"
+export CC_BG_YELLOW="33"
+export CC_BG_BLUE="34"
+export CC_BG_MAGENTA="35"
+export CC_BG_CYAN="36"
+export CC_BG_LIGHT_GRAY="37"
+export CC_BG_DARK_GRAY="90"
+export CC_BG_LIGHT_RED="91"
+export CC_BG_LIGHT_GREEN="92"
+export CC_BG_LIGHT_YELLOW="93"
+export CC_BG_LIGHT_BLUE="94"
+export CC_BG_LIGHT_MAGENTA="95"
+export CC_BG_LIGHT_CYAN="97"
+#############################
+# Prompt Colors
+#############################
+
+export C_DEFAULT="\[\033[m\]"
+export C_BLACK="\[\033[30m\]"
+export C_BLUE="\[\033[34m\]"
+export C_CYAN="\[\033[36m\]"
+export C_GREEN="\[\033[32m\]"
+export C_MAGENTA='\033[0;35m'
+export C_ORANGE='\033[0;33m'
+export C_PURPLE="\[\033[35m\]"
+export C_RED="\[\033[31m\]"
+export C_WHITE="\[\033[1;37m\]"
+export C_YELLOW="\[\033[33m\]"
+
+export C_LIGHTBLUE="\[\033[1;34m\]"
+export C_LIGHTCYAN="\[\033[1;36m\]"
+export C_LIGHTGREEN="\[\033[1;32m\]"
+export C_LIGHTGRAY="\[\033[37m\]"
+export C_LIGHTPURPLE="\[\033[1;35m\]"
+export C_LIGHTRED="\[\033[1;31m\]"
+export C_LIGHTYELLOW="\[\033[1;33m\]"
+
+export C_DARKGRAY="\[\033[1;30m\]"
+
+export C_BG_BLACK="\[\033[40m\]"
+export C_BG_BLUE="\[\033[44m\]"
+export C_BG_CYAN="\[\033[46m\]"
+export C_BG_GREEN="\[\033[42m\]"
+export C_BG_LIGHTGRAY="\[\033[47m\]"
+export C_BG_PURPLE="\[\033[45m\]"
+export C_BG_RED="\[\033[41m\]"
+export C_BG_YELLOW="\[\033[43m\]"
+
+#############################
+# GNU LS Colors
+#############################
+#0   = default colour
+#1   = bold
+#4   = underlined
+#5   = flashing text (disabled on some terminals)
+#7   = reverse field (exchange foreground and background color)
+#8   = concealed (invisible)
+
+#30  = black
+#31  = red
+#32  = green
+#33  = orange
+#34  = blue
+#35  = purple
+#36  = cyan
+#37  = grey
+#90  = dark grey
+#91  = light red
+#92  = light green
+#93  = yellow
+#94  = light blue
+#95  = light purple
+#96  = turquoise
+#97  = white
+
+#40  = black background
+#41  = red background
+#42  = green background
+#43  = orange background
+#44  = blue background
+#45  = purple background
+#46  = cyan background
+#47  = grey background
+#100 = dark grey background
+#101 = light red background
+#102 = light green background
+#103 = yellow background
+#104 = light blue background
+#105 = light purple background
+#106 = turquoise background
+#107 = white background
+
+#bd = (BLOCK, BLK)   Block device (buffered) special file
+#cd = (CHAR, CHR)    Character device (unbuffered) special file
+#di = (DIR)  Directory
+#do = (DOOR) [Door][1]
+#ex = (EXEC) Executable file (ie. has 'x' set in permissions)
+#fi = (FILE) Normal file
+#ln = (SYMLINK, LINK, LNK)   Symbolic link. If you set this to ‘target’ instead of a numerical value, the color is as for the file pointed to.
+#mi = (MISSING)  Non-existent file pointed to by a symbolic link (visible when you type ls -l)
+#no = (NORMAL, NORM) Normal (non-filename) text. Global default, although everything should be something
+#or = (ORPHAN)   Symbolic link pointing to an orphaned non-existent file
+#ow = (OTHER_WRITABLE)   Directory that is other-writable (o+w) and not sticky
+#pi = (FIFO, PIPE)   Named pipe (fifo file)
+#sg = (SETGID)   File that is setgid (g+s)
+#so = (SOCK) Socket file
+#st = (STICKY)   Directory with the sticky bit set (+t) and not other-writable
+#su = (SETUID)   File that is setuid (u+s)
+#tw = (STICKY_OTHER_WRITABLE)    Directory that is sticky and other-writable (+t,o+w)
+#*.extension = Every file using this extension e.g. *.rpm = files with the ending .rpm
+
+#Directory
+LS_COLORS="di=1;91"
+
+#Symlink
+LS_COLORS="$LS_COLORS:ln=0;96"
+
+#Executable
+LS_COLORS="$LS_COLORS:ex=0;93;45"
+
+#File
+LS_COLORS="$LS_COLORS:fi=0;37"
+
+export LS_COLORS
+
+#############################
+# BSD COLORS
+#############################
+
+#a	 black
+#b	 red
+#c	 green
+#d	 brown
+#e	 blue
+#f	 magenta
+#g	 cyan
+#h	 light grey
+#A	 bold black, usually shows up as dark grey
+#B	 bold red
+#C	 bold green
+#D	 bold brown, usually shows up as yellow
+#E	 bold blue
+#F	 bold magenta
+#G	 bold cyan
+#H	 bold light grey; looks	like bright white
+#x	 default foreground or background
+
+#The default is "exfxcxdxbxegedabagacad", i.e., blue fore-ground and
+#default background for regular directories, black foreground and red background
+#for setuid executables, etc.
+
+#This string is a concatenation of pairs of the format fb, where f is the foreground color and	b is the background color.
+
+export LSCOLORS=gxBxhxDxfxhxhxhxhxcxcx
+

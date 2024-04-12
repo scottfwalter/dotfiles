@@ -1,0 +1,8 @@
+#!/bin/bash
+
+ps -ef | grep "9999:localhost:9999" | grep -v grep | awk '{print $2}' | xargs kill -9
+#ssh -p 8080 -f -N -L 9999:localhost:9999 tunnel@scottwalter.com
+#ssh -p 80 -f -N -L 9999:localhost:9999 root@tunnel.scottwalter.com
+ssh -p 80 -f -N -L 9999:localhost:9999 tunnel@tunnel.scottwalter.net
+open vnc://localhost:9999
+

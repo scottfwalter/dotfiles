@@ -1,0 +1,5 @@
+username="scott"
+hostname="scott"
+kernel="scott"
+uptime="scott"
+cat ~/bin/welcome-banner.txt | sed -e "s/%user%/$username/" -e "s/%hostname%/$hostname/" -e "s/%kernel%/$kernel/" -e "s/%uptime%/$uptime/"

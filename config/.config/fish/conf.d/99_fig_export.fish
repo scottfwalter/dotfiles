@@ -1,0 +1,1 @@
+/Users/scott/fig-export/dotfiles/dotfile.fish

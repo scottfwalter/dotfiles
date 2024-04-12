@@ -1,0 +1,9 @@
+#! /usr/bin/env bash
+#read -p "Are you sure? " -n 1 -r
+#echo    # (optional) move to a new line
+#if [[ $REPLY =~ ^[Yy]$ ]]
+#then
+  date=$(date +%m-%d-%Y)
+  mv node_modules "node_modules-$date"
+  rm -rf "node_modules-$date" &
+#fi

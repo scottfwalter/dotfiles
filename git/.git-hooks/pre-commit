@@ -1,0 +1,36 @@
+#!/bin/bash
+
+echo "starting pre commit..."
+
+# FILES_PATTERN='\.(js)(\..+)?$'
+# FORBIDDEN='ddescribe\|fdescribe'
+# DIFF_RESULTS=$(git diff --cached --name-only)
+# SIZE=${#DIFF_RESULTS}
+
+# if [ $SIZE -eq 0 ]
+# then
+#   exit 0
+# fi
+
+# MATCHING_FILES=$(echo $DIFF_RESULTS | grep -E $FILES_PATTERN)
+# #if $MATCHING_FILES is empty it means grep did not find any files matching the pattern
+# if [ -z "$MATCHING_FILES" ]
+# then
+#   echo "...pre commit done."
+#   exit 0
+# fi
+
+# echo $MATCHING_FILES | GREP_COLOR='4;5;37;41' xargs grep --color --with-filename -n $FORBIDDEN
+
+# RC=$?
+# if [ $RC -eq 0 ]
+# then
+#   echo "COMMIT REJECTED found forbidden references. Please remove them before committing"
+#   echo "FORBIDDEN values are: $FORBIDDEN"
+#   EXIT_CODE=1
+# else
+#   EXIT_CODE=0
+# fi
+
+echo "...pre commit done."
+exit $EXIT_CODE
