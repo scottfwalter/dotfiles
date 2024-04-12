@@ -1,0 +1,11 @@
+---
+downloads: ~/.ansible-downloads/
+
+homebrew_installed_packages:
+  # - ansible # Installed via Pip.
+  - archey
+  - jq
+  - sl
+  - node
+  - fnm
+

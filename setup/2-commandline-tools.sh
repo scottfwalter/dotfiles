@@ -137,6 +137,9 @@ brew install gs
 # GNU Awk
 brew install gawk
 
+# MDLess
+brew install mdless
+
 ###########################################
 #Fun tools
 ###########################################
