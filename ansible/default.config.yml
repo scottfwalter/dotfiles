@@ -4,8 +4,88 @@ downloads: ~/.ansible-downloads/
 homebrew_installed_packages:
   # - ansible # Installed via Pip.
   - archey
-  - jq
-  - sl
-  - node
+  - bat
+  - boxes
+  - btop
+  - cmatrix
+  - cowsay
+  - diff-so-fancy
+  - duf
+  - entr
+  - exa
+  - fd
+  - ffmpeg
+  - figlet
   - fnm
-
+  - fortune
+  - fx
+  - fzf
+  - gawk
+  - gping
+  - gs
+  - gsed
+  - gum
+  - htmlq
+  - htop
+# - httpie
+  - imagemagick
+  - jo
+  - jq
+  - jqp
+  - jsonpp
+  - lazydocker
+  - lazygit
+  - mailsy
+  - mas
+  - mc
+  - mdless
+  - ncdu
+  - neofetch
+  - node
+  - nvim
+  - pup
+  - pyenv
+  - rclone
+  - rg
+  - sl
+  - speedtest
+  - starship
+  - stow
+# - tag
+  - tealdeer
+  - tmux
+  - toilet
+  - trdsql
+  - tree
+  - wakeonlan
+  - wifi-password
+  - yq
+  - yt-dlp
+mas_installed_apps:
+  - { id: 1365531024, name: "1Blocker" }
+  - { id: 1437681957, name: "Audio Book Builder" }
+  - { id: 425264550, name: "Blackmagic Disk Speed Test" }
+  - { id: 635758264, name: "Calca" }
+  - { id: 1287239339, name: "Color Slurp" }
+  - { id: 411643860, name: "Daisy Disk" }
+  - { id: 1470584107, name: "Dato" }
+  - { id: 1444383602, name: "Good Notes" }
+  - { id: 1462114288, name: "Grammarly" }
+  - { id: 1450752761, name: "Harmony Bridge" }
+  - { id: 955414427, name: "Home Designer 3D" }
+  - { id: 302584613, name: "Kindle" }
+  - { id: 1611554653, name: "Logger for Shortcuts" }
+  - { id: 890031187, name: "Marked 2" }
+  - { id: 1575588022, name: "Menubar x" }
+  - { id: 1289197285, name: "Mind Node" }
+  - { id: 1303222628, name: "Paprika" }
+  - { id: 1120099014, name: "PDF Viewer" }
+  - { id: 1289583905, name: "Pixelmator Pro" }
+  - { id: 1597340986, name: "Sharebot" }
+  - { id: 1522267256, name: "Shareful" }
+  - { id: 6445813049, name: "Spark" }
+  - { id: 1519946553, name: "Subtrack" }
+  - { id: 425424353, name: "The Unarchiver" }
+  - { id: 1263472847, name: "Video File List" }
+  - { id: 889428659, name: "Xscope" }
+  - { id: 497799835, name: "XCode" }
