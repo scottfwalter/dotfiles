@@ -6,21 +6,21 @@
     - default.config.yml
 
   vars:
-      app_path: hello.txt
-      github_key: !vault |
-          $ANSIBLE_VAULT;1.1;AES256
-          34613434653562383062333762623239623138623137366662623630353862633239646265363438
-          6666333436633537613232633131396564303363656230320a626330333235333238343830376336
-          61323337656165383566306265313833643766313263643135643236663334396462643330313632
-          6430393164666435370a636630646436616130383431366238646638633831363736323234656136
-          66363733616433393733613632343565346632383739316339633436613861373061326232633837
-          3930353935613235376431643439336363383364646137356565
+    app_path: hello.txt
+    github_key: !vault |
+      $ANSIBLE_VAULT;1.1;AES256
+      34613434653562383062333762623239623138623137366662623630353862633239646265363438
+      6666333436633537613232633131396564303363656230320a626330333235333238343830376336
+      61323337656165383566306265313833643766313263643135643236663334396462643330313632
+      6430393164666435370a636630646436616130383431366238646638633831363736323234656136
+      66363733616433393733613632343565346632383739316339633436613861373061326232633837
+      3930353935613235376431643439336363383364646137356565
 
   pre_tasks:
     - name: Include playbook configuration.
-      include_vars: "{{ item }}"
+      include_vars: '{{ item }}'
       with_fileglob:
-        - "{{ playbook_dir }}/config.yml"
+        - '{{ playbook_dir }}/config.yml'
       tags: ['always']
 
   roles:
@@ -35,15 +35,18 @@
     - name: Clone dot files
       git:
         repo: https://scottfwalter:{{github_key}}@github.com/scottfwalter/dotfiles.git
-        dest: ~/tmp
+        dest: ~/tmp/dotfiles
         clone: yes
         update: yes
+      tags: ['dotfiles']
     - name: Debug output
       debug:
         msg:
-          var1: "{{ app_path }}"
-          var2: "{{ downloads }}"
-          var3: "{{ github_key }}"
+          var1: '{{ app_path }}'
+          var2: '{{ downloads }}'
+          var3: '{{ github_key }}'
+          var4: '{{ ansible_distribution }}'
+      tags: ['debug']
 
     - name: Write some file
       ansible.builtin.shell: echo "scott" >> ~/{{app_path}}
@@ -51,3 +54,6 @@
     - name: Run Stow
       ansible.builtin.shell: stow -d ~/dotfiles -t ~/ bash bin config csh duckdns finicky git mysetup prettier sh ssh tcsh tmux vim zsh
 
+    - name: Custom Brew
+      ansible.builtin.shell: brew install httpie tag
+      tags: ['custombrew']
