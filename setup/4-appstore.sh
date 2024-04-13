@@ -7,17 +7,35 @@ mas install 1437681957
 ## Blackmagic Disk Speed Test
 mas install 425264550
 
+# Boop
+mas install 1518425043
+
 # Calca
 mas install 635758264
 
+# Charty for Shortcuts
+mas install 1494386093
+
 # Color Slurp
 mas install 1287239339
+
+# Color Squid
+mas install 1057705278
 
 # Daisy Disk
 mas install 411643860
 
 # Dato
 mas install 1470584107
+
+# Dropover
+mas install 1355679052
+
+# Final Cut Pro
+mas install 424389933
+
+# Garage Band
+mas install 682658836
 
 # Good Notes
 mas install 1444383602
@@ -43,8 +61,20 @@ mas install 890031187
 # Menubar X
 mas install 1575588022
 
+# Meta Image
+mas install 1397099749
+
 # Mind Node
 mas install 1289197285
+
+# Motion
+mas install 434290957
+
+# MP3 Tag
+mas install 1532597159
+
+# OmniGraffle
+mas install 11425787531
 
 # Paprika
 mas install 1303222628
@@ -54,6 +84,15 @@ mas install 1120099014
 
 # Pixelmator Pro
 mas install 1289583905
+
+# Photomator
+mas install 1444636541
+
+# Pure Paste
+mas install 1611378436
+
+# Secure Shell Fish
+mas install 1336634154
 
 # Sharebot
 mas install 1597340986
