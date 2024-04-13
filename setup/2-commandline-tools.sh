@@ -221,6 +221,9 @@ brew install gnu-sed
 # archey - system information
 brew install archey
 
+# Neofetch
+brew install neofetch
+
 
 ###########################################
 #Shell Customization

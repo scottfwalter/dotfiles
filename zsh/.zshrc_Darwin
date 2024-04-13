@@ -9,7 +9,7 @@ test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell
 
 #show apple banner
 if [[ ! "$TERM_PROGRAM" == "vscode" ]]; then
-    archey -c -o
+    #archey -c -o
 fi
 
 
