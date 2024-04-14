@@ -2,6 +2,11 @@
 - name: Configure host.
   hosts: localhost
 
+  #become: true
+  #become_user: your_become_user
+  #become_method: sudo
+  #ansible_become_timeout: 7200
+
   vars_files:
     - default.config.yml
 
@@ -55,5 +60,5 @@
       ansible.builtin.shell: stow -d ~/dotfiles -t ~/ bash bin config csh duckdns finicky git mysetup prettier sh ssh tcsh tmux vim zsh
 
     - name: Custom Brew
-      ansible.builtin.shell: brew install httpie tag
+      ansible.builtin.shell: brew install httpie tag todoist
       tags: ['custombrew']
