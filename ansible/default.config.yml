@@ -8,9 +8,11 @@ homebrew_installed_packages:
   - boxes
   - btop
   - cmatrix
+  - codewhisperer
   - cowsay
   - diff-so-fancy
   - duf
+  - elgato-stream-deck
   - entr
   - exa
   - fd
@@ -27,7 +29,7 @@ homebrew_installed_packages:
   - gum
   - htmlq
   - htop
-# - httpie
+  # - httpie
   - imagemagick
   - jo
   - jq
@@ -51,9 +53,10 @@ homebrew_installed_packages:
   - speedtest
   - starship
   - stow
-# - tag
+  # - tag
   - tealdeer
   - tmux
+  # - todoist
   - toilet
   - trdsql
   - tree
@@ -62,50 +65,108 @@ homebrew_installed_packages:
   - yq
   - yt-dlp
 
-homebrew_taps: []
+  #homebrew_taps:
+  #  - sachaos/todoist
 
-homebrew_cask_appdir: /Applications
-homebrew_cask_apps:
+  #homebrew_cask_appdir: /Applications
+  #homebrew_cask_apps:
+  - 1password
+  - 1password-cli
+  - a-better-finder-rename
+  - a-better-finder-attributes
+  - airfoil
+  - alacritty
+  - alfred
+  - affinity-designer
+  - affinity-photo
+  - affinity-publisher
+  - audio-hijack
+  - avast-security
+  - backblaze
+  - carbon-copy-cloner
+  - default-folder-x
+  - discord
+  - dropbox
+  - dropzone
+  - fastrawviewer
+  - figma
+  - find-any-file
+  - finicky
+  - fission
+  - fujitsu-scansnap-home
   - google-chrome
+  - hazel
+  - httpie
+  - keyboard-cleaner
+  - keyboard-maestro
+  - knockknock
+  - lingon-x
+  - loopback
+  - makemkv
+  - netiquette
+  - obsidian
+  - onyx
+  - plex
+  - private-internet-access
+  - qmk-toolbox
+  - rectangle
+  - retrobatch
+  - rightfont
+  - radio-silence
+  - screenflick
+  - screenflow
+  - setapp
+  - sloth
+  - soundsource
+  - telegram
+  - todoist
+  - topnotch
+  - transmission
+  - transmit
+  - via
+  - visual-studio-code
+  - zed
+  - zooe
 
 mas_installed_apps:
-  - { id: 1365531024, name: "1Blocker" }
-  - { id: 1437681957, name: "Audio Book Builder" }
-  - { id: 425264550, name: "Blackmagic Disk Speed Test" }
-  - { id: 1518425043, name: "Boop" }
-  - { id: 635758264, name: "Calca" }
-# - { id: 1494386093, name: "Charty for Shortcuts" }
-  - { id: 1287239339, name: "Color Slurp" }
-  - { id: 1057705278, name: "Color Squid" }
-  - { id: 411643860, name: "Daisy Disk" }
-  - { id: 1470584107, name: "Dato" }
-  - { id: 1355679052, name: "Dropover" }
-  - { id: 424389933, name: "Final Cut Pro" }
-  - { id: 682658836, name: "Garage Band" }
-  - { id: 1444383602, name: "Good Notes" }
-  - { id: 1462114288, name: "Grammarly" }
-  - { id: 1450752761, name: "Harmony Bridge" }
-  - { id: 955414427, name: "Home Designer 3D" }
-  - { id: 302584613, name: "Kindle" }
-  - { id: 1611554653, name: "Logger for Shortcuts" }
-  - { id: 890031187, name: "Marked 2" }
-  - { id: 1575588022, name: "Menubar x" }
-  - { id: 1397099749, name: "Meta Image" }
-  - { id: 1289197285, name: "Mind Node" }
-  - { id: 434290957, name: "Motion" }
-  - { id: 1532597159, name: "Mp3 Tag" }
-  - { id: 1142578753, name: "OmniGraffle" }
-  - { id: 1303222628, name: "Paprika" }
-  - { id: 1120099014, name: "PDF Viewer" }
-  - { id: 1289583905, name: "Pixelmator Pro" }
-  - { id: 1444636541, name: "Photomator" }
-  - { id: 1611378436, name: "Pure Paste" }
-  - { id: 1336634154, name: "Secure Shell Fish" }
-  - { id: 1597340986, name: "Sharebot" }
-  - { id: 1522267256, name: "Shareful" }
-  - { id: 6445813049, name: "Spark" }
-  - { id: 1519946553, name: "Subtrack" }
-  - { id: 425424353, name: "The Unarchiver" }
-  - { id: 1263472847, name: "Video File List" }
-  - { id: 889428659, name: "Xscope" }
-  - { id: 497799835, name: "XCode" }
+  - { id: 1365531024, name: '1Blocker' }
+  - { id: 1437681957, name: 'Audio Book Builder' }
+  - { id: 425264550, name: 'Blackmagic Disk Speed Test' }
+  - { id: 1518425043, name: 'Boop' }
+  - { id: 635758264, name: 'Calca' }
+  # - { id: 1494386093, name: "Charty for Shortcuts" }
+  - { id: 1287239339, name: 'Color Slurp' }
+  - { id: 1057705278, name: 'Color Squid' }
+  - { id: 1073406000, name: 'Color Folders' }
+  - { id: 411643860, name: 'Daisy Disk' }
+  - { id: 1470584107, name: 'Dato' }
+  - { id: 1355679052, name: 'Dropover' }
+  - { id: 424389933, name: 'Final Cut Pro' }
+  - { id: 682658836, name: 'Garage Band' }
+  - { id: 1444383602, name: 'Good Notes' }
+  - { id: 1462114288, name: 'Grammarly' }
+  - { id: 1450752761, name: 'Harmony Bridge' }
+  - { id: 955414427, name: 'Home Designer 3D' }
+  - { id: 302584613, name: 'Kindle' }
+  - { id: 1611554653, name: 'Logger for Shortcuts' }
+  - { id: 890031187, name: 'Marked 2' }
+  - { id: 1575588022, name: 'Menubar x' }
+  - { id: 1397099749, name: 'Meta Image' }
+  - { id: 1289197285, name: 'Mind Node' }
+  - { id: 434290957, name: 'Motion' }
+  - { id: 1532597159, name: 'Mp3 Tag' }
+  - { id: 1142578753, name: 'OmniGraffle' }
+  - { id: 1303222628, name: 'Paprika' }
+  - { id: 1120099014, name: 'PDF Viewer' }
+  - { id: 1289583905, name: 'Pixelmator Pro' }
+  - { id: 1444636541, name: 'Photomator' }
+  - { id: 1611378436, name: 'Pure Paste' }
+  - { id: 1336634154, name: 'Secure Shell Fish' }
+  - { id: 1597340986, name: 'Sharebot' }
+  - { id: 1522267256, name: 'Shareful' }
+  - { id: 6445813049, name: 'Spark' }
+  - { id: 1519946553, name: 'Subtrack' }
+  - { id: 425424353, name: 'The Unarchiver' }
+  - { id: 1263472847, name: 'Video File List' }
+  - { id: 889428659, name: 'Xscope' }
+  - { id: 497799835, name: 'XCode' }

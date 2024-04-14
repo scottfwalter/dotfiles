@@ -22,6 +22,9 @@ mas install 1287239339
 # Color Squid
 mas install 1057705278
 
+# Colorful Folders
+mas install 1073406000
+
 # Daisy Disk
 mas install 411643860
 
