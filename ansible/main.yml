@@ -62,3 +62,7 @@
     - name: Custom Brew
       ansible.builtin.shell: brew install httpie tag todoist
       tags: ['custombrew']
+
+    - name: macOS Defaults
+      ansible.builtin.shell: ./macos-config.sh
+      tags: ['macos-defaults']
