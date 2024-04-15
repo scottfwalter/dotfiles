@@ -1,4 +1,2 @@
-^/README.*
-^/LICENSE.*
-^/COPYING
-
+#Exclude all that don't have .package.lst
+^((?!\.package\.lst).)*$

@@ -2,6 +2,13 @@
 
 SSH_DIR="$HOME/.ssh"
 
+sudo -v
+while true; do
+	sudo -n true
+	sleep 60
+	kill -0 "$$" || exit
+done 2>/dev/null &
+
 xcode-select --instal
 
 if ! [ -x "$(command -v brew)" ]; then
@@ -23,4 +30,5 @@ fi
 
 ./brew-formula.sh
 ./brew-cask.sh
+./appstore-install.sh
 ./macos-config.sh
