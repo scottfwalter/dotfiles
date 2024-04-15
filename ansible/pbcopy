@@ -1,8 +1,0 @@
----
-- name: Configure host.
-  hosts: localhost
-
-  tasks:
-    - name: Debug output
-      debug: "hello"
-
