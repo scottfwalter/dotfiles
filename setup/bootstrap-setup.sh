@@ -36,6 +36,7 @@ if ! [[ -f "$SSH_DIR/id_rsa" ]]; then
 	chmod 600 "$SSH_DIR/authorized_keys"
 fi
 
+./npm-packages.sh
 ./brew-formula.sh
 ./brew-cask.sh
 ./appstore-install.sh
