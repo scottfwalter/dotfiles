@@ -9,7 +9,15 @@ while true; do
 	kill -0 "$$" || exit
 done 2>/dev/null &
 
-xcode-select --instal
+xcode-select --install
+
+if ! [ -x "$(command -v fnm)" ]; then
+	curl -fsSL https://fnm.vercel.app/install | bash
+	echo "Pleas reload shell and run this script again"
+	exit 1
+else
+	fnm install --latest
+fi
 
 if ! [ -x "$(command -v brew)" ]; then
 	echo "installing brew..."
