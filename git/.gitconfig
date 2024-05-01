@@ -10,6 +10,9 @@
 
 	pager = delta
 
+[pager]
+        difftool = true
+
 [interactive]
 	diffFilter = delta --color-only
 
@@ -30,14 +33,16 @@
 [difftool]
 	prompt = false
 
+[difftool "difftastic"]
+        cmd = difft "$LOCAL" "$REMOTE"
+
 #[mergetool]
 #	prompt = false
 
-#[diff]
-#	tool = Kaleidoscope
-
 [diff]
 	colorMoved = default
+	tool = difftastic
+#	tool = Kaleidoscope
 
 [alias]
 	alias = ! git config --get-regexp ^alias\\. | sed -e s/^alias\\.// -e s/\\ /\\ =\\ /
