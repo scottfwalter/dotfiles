@@ -3,9 +3,9 @@ bat
 boxes
 btop
 cmatrix
-codewhisperer:cw
 cowsay
 diff-so-fancy
+difftastic:difft
 duf
 entr
 eza
@@ -58,6 +58,8 @@ trdsql
 tree
 wakeonlan
 wifi-password
+xh
+yazi
 yq
 yt-dlp
 zoxide
