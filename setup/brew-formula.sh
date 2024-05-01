@@ -16,6 +16,7 @@ while read p; do
 
 	if ! [ -x "$(command -v $check_command)" ]; then
 		echo "installing $p..."
+                brew install $check_command
 	fi
 
 done <./brew-formula.lst

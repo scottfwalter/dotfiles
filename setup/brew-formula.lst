@@ -8,16 +8,17 @@ cowsay
 diff-so-fancy
 duf
 entr
-exa
+eza
 fd
 ffmpeg
 figlet
 fnm
-forgit:glo
+forgit
 fortune
 fx
 fzf
 gawk
+git-delta:delta
 gping
 gs
 gsed
@@ -59,3 +60,4 @@ wakeonlan
 wifi-password
 yq
 yt-dlp
+zoxide
