@@ -1,4 +1,3 @@
-archey
 bat
 boxes
 btop
@@ -9,7 +8,6 @@ diff-so-fancy
 difft
 duf
 entr
-exa
 fd
 ffmpeg
 figlet
@@ -37,7 +35,6 @@ mc
 mdless
 ncdu
 nvim
-pup
 pyenv
 rclone
 rg
