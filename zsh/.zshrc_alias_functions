@@ -149,3 +149,10 @@ function checksetup() {
 	done < ~/.package.lst
 	echo "...setup check completed."
 }
+
+##########################
+# Nice Related
+##########################
+function jira-from-branchname() {
+	echo "$1" | sed -n 's/.*\b\(CXAPP-[0-9]\{5\}\).*/\1/p'
+}

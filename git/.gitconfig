@@ -8,41 +8,22 @@
 	hooksPath = ~/.git-hooks
 	excludesfile = ~/.gitignore
 
-	pager = delta
-
-[pager]
-        difftool = true
-
-[interactive]
-	diffFilter = delta --color-only
-
-[delta]
-	navigate = true    # use n and N to move between diff sections
-	light = false      # set to true if you're in a terminal w/ a light background color (e.g. the default macOS terminal)
 
 [merge]
 	conflictstyle = diff3
 
-#[mergetool "Kaleidoscope"]
-#	cmd = ksdiff --merge --output \"$MERGED\" --base \"$BASE\" -- \"$LOCAL\" --snapshot \"$REMOTE\" --snapshot
-#	trustexitcode = true
-#[merge]
-#	tool = Kaleidoscope
-#[difftool "Kaleidoscope"]
-#	cmd = ksdiff --partial-changeset --relative-path \"$MERGED\" -- \"$LOCAL\" \"$REMOTE\"
+[diff]
+        tool = difftastic
+
 [difftool]
-	prompt = false
+        prompt = false
 
 [difftool "difftastic"]
         cmd = difft "$LOCAL" "$REMOTE"
 
-#[mergetool]
-#	prompt = false
+[pager]
+        difftool = true
 
-[diff]
-	colorMoved = default
-	tool = difftastic
-#	tool = Kaleidoscope
 
 [alias]
 	alias = ! git config --get-regexp ^alias\\. | sed -e s/^alias\\.// -e s/\\ /\\ =\\ /
@@ -63,12 +44,6 @@
 	cleanup = clean -f -d
 	wip = !git add . && git commit --no-verify -m \"wip\"
 
-[difftool "sourcetree"]
-	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
-	path =
-[mergetool "sourcetree"]
-	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
-	trustExitCode = true
 [push]
 	default = matching
 	autoSetupRemote = true

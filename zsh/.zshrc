@@ -32,6 +32,10 @@ setopt HIST_FIND_NO_DUPS
 setopt HIST_REDUCE_BLANKS
 HISTFILE=${ZDOTDIR:-$HOME}/.zsh_history
 
+bindkey "^[[A" history-search-backward
+bindkey "^[[B" history-search-forward
+
+
 #################################
 # vi command line editing
 #################################
