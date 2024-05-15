@@ -2,7 +2,6 @@
 [[ -f "${HOME}/Library/Application Support/amazon-q/shell/zshrc.pre.zsh" ]] && builtin source "${HOME}/Library/Application Support/amazon-q/shell/zshrc.pre.zsh"
 # GITSTATUS_LOG_LEVEL=DEBUG
 
-export HOMEBREW_PREFIX="$(brew --prefix)"
 
 
 #################################
@@ -100,6 +99,7 @@ export PATH="/opt/homebrew/bin:/usr/local/bin:$HOME/bin:$PATH"
 export PATH="/opt/homebrew/opt/openjdk/bin:$PATH"
 export ICLOUD="$HOME/Library/Mobile Documents/com~apple~CloudDocs"
 export DOTFILES="$HOME/Dropbox/dotfiles"
+export HOMEBREW_PREFIX="$(brew --prefix)"
 
 #################################
 # Source Additional Files
