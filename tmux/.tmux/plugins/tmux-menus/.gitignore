@@ -1,0 +1,14 @@
+# temp files
+*~
+\#*
+
+# olint linter config
+.cache.olint
+
+# tmux-menus cache
+cache/
+
+tests/
+.DS_Store
+__pycache__
+
