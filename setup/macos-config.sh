@@ -31,9 +31,9 @@ echo ""
 # keep-alive to update existing `sudo` time stamp until script has finished
 sudo -v
 while true; do
-	sudo -n true
-	sleep 60
-	kill -0 "$$" || exit
+  sudo -n true
+  sleep 60
+  kill -0 "$$" || exit
 done 2>/dev/null &
 
 ##########
@@ -181,6 +181,9 @@ defaults write com.apple.finder "ShowRemovableMediaOnDesktop" -bool "true"
 # Show connected servers
 defaults write com.apple.finder "ShowMountedServersOnDesktop" -bool "true"
 
+# Disable hide windows on wallpaper click
+defaults write com.apple.WindowManager EnableStandardClickToShowDesktop -int 0
+
 ##########
 # Keyboard
 ##########
@@ -241,12 +244,12 @@ defaults write com.apple.print.PrintingPrefs "Quit When Finished" -bool true
 ##########
 
 for app in "Activity Monitor" \
-	"Dock" \
-	"Finder" \
-	"Safari" \
-	"SystemUIServer" \
-	"TextEdit"; do
-	killall "${app}" &>/dev/null
+  "Dock" \
+  "Finder" \
+  "Safari" \
+  "SystemUIServer" \
+  "TextEdit"; do
+  killall "${app}" &>/dev/null
 done
 
 exit 0
