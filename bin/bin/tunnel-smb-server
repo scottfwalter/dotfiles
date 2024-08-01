@@ -1,0 +1,6 @@
+#!/bin/bash
+
+#ssh -NTC -o ServerAliveInterval=60 -o ExitOnForwardFailure=yes -R 9999:localhost:5900 tunnel@scottwalter.
+#ssh -NTC -o ServerAliveInterval=60 -o ExitOnForwardFailure=yes -R 9999:localhost:5900 tunnel@tunnel.scottwalter.net
+ssh -NTC -o ServerAliveInterval=60 -o ExitOnForwardFailure=yes -R 9998:localhost:445 tunnel@scottwalter.net
+
