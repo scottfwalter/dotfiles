@@ -217,5 +217,11 @@ export PATH="/Users/scott/.rd/bin:$PATH"
 
 #[[ -f "$HOME/fig-export/dotfiles/dotfile.zsh" ]] && builtin source "$HOME/fig-export/dotfiles/dotfile.zsh"
 
+
+if [ -z "$TMUX" ] && [ "$TERM" = "xterm-kitty" ]; then
+  #tmux attach || exec tmux new-session && exit;
+  tmux attach || tmux
+fi
+
 # Amazon Q post block. Keep at the bottom of this file.
 [[ -f "${HOME}/Library/Application Support/amazon-q/shell/zshrc.post.zsh" ]] && builtin source "${HOME}/Library/Application Support/amazon-q/shell/zshrc.post.zsh"
