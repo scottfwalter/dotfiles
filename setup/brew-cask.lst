@@ -1,60 +1,59 @@
-1password
+#1password:1Password
 1password-cli
-a-better-finder-rename
-a-better-finder-attributes
-airfoil
+a-better-finder-rename:"A Better Finder Rename"
+a-better-finder-attributes:"A Better Finder Attributes"
+airfoil:Airfoil
 alacritty
-alfred
-affinity-designer
+alfred:Alfred
+affinity-designer:"Affinity Designer"
 affinity-photo
 affinity-publisher
 applite
 audio-hijack
-avast-security
-backblaze
-carbon-copy-cloner
-default-folder-x
+avast-security:Avast
+backblaze:Backblaze
+carbon-copy-cloner:"Carbon Copy Cloner"
+default-folder-x:"Default Folder X"
 devtoys
-discord
-dropbox
+discord:Discord
+dropbox:Dropbox
 dropzone
-elegato-stream-deck
-fastrawviewer
-figma
-find-any-file
-finicky
-fission
+elgato-stream-deck
+fastrawviewer:FastRawViewer
+figma:Figma
+find-any-file:"Find Any File"
+finicky:Finicky
+fission:Fission
 fujitsu-scansnap-home
-google-chrome
-hazel
-httpie
-keyboard-cleaner
-keyboard-maestro
+google-chrome:"Google Chrome"
+hazel:Hazel
+httpie:HTTPie
+keyboard-cleaner:"KeyboardCleanTool"
+keyboard-maestro:"Keyboard Maestro"
 knockknock
-lingon-x
+lingon-x:"Lingon X"
 loopback
 makemkv
-netiquette
-obsidian
+netiquette:Netiquette
+obsidian:Obsidian
 onyx
 plex
-private-internet-access
+private-internet-access:"Private Internet Access"
 qmk-toolbox
-rectangle
+rectangle:Rectangle
 retrobatch
-rightfont
+rightfont:RightFont
 radio-silence
-screenflick
-screenflow
-setapp
-shortcat
-sloth
-soundsource
-telegram
-todoist
-topnotch
+screenflick:Screenflick
+screenflow:Screenflow
+setapp:Setapp
+shortcat:Shortcat
+sloth:Sloth
+soundsource:SoundSource
+telegram:Telegram
+todoist:Todoist
+topnotch:TopNotch
 transmission
-transmit
-via
-visual-studio-code
-zed
+transmit:Transmit
+visual-studio-code:"Visual Studio Code"
+zed:Zed

@@ -128,29 +128,6 @@ function hostip() {
     fi
 }
 
-
-##########################
-# Check Setup
-##########################
-function checksetup() {
-	echo "Checking setup..."
-	if [ ! -f ~/.package.lst ]; then
-		echo "~/.package.lst not found.  Cannot continue!"
-		return 1
-
-	fi
-	while read p; do
-		if command -v $p > /dev/null; then
-			#echo -e "\xE2\x9C\x94 $p found.\n"
-			#echo -e "\u2705 $p found.\n"
-			:
-		else
-			echo -e "\xE2\x9D\x8C $p missing.\n"
-		fi
-	done < ~/.package.lst
-	echo "...setup check completed."
-}
-
 ##########################
 # Nice Related
 ##########################
