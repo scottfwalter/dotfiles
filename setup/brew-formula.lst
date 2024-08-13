@@ -48,7 +48,6 @@ nvim
 pyenv
 rclone
 rg
-shortcat
 sl
 speedtest
 starship
@@ -57,7 +56,6 @@ superfile:spf
 tag
 tealdeer:tldr
 tmux
-todoist
 toilet
 trdsql
 tree
