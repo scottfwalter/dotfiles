@@ -1,19 +1,20 @@
 1password:1Password
 1password-cli
-a-better-finder-rename:"A Better Finder Rename"
-a-better-finder-attributes:"A Better Finder Attributes"
+a-better-finder-rename:A Better Finder Rename 12
+a-better-finder-attributes:A Better Finder Attributes
 airfoil:Airfoil
 alacritty
 alfred:Alfred
-affinity-designer:"Affinity Designer"
-affinity-photo:"Affinity Photo"
-affinity-publisher:"Affinity Publisher"
+affinity-designer:Affinity Designer
+affinity-photo:Affinity Photo
+affinity-publisher:Affinity Publisher
 applite
-audio-hijack:"Audio Hijack"
+audio-hijack:Audio Hijack
 avast-security:Avast
 backblaze:Backblaze
-carbon-copy-cloner:"Carbon Copy Cloner"
-default-folder-x:"Default Folder X"
+canva:Canva
+carbon-copy-cloner:Carbon Copy Cloner
+default-folder-x:Default Folder X
 devtoys
 discord:Discord
 dropbox:Dropbox
@@ -21,25 +22,25 @@ dropzone
 elgato-stream-deck
 fastrawviewer:FastRawViewer
 figma:Figma
-find-any-file:"Find Any File"
+find-any-file:Find Any File
 finicky:Finicky
 fission:Fission
 fujitsu-scansnap-home
-google-chrome:"Google Chrome"
+google-chrome:Google Chrome
 hazel:Hazel
 httpie:HTTPie
-keyboard-cleaner:"KeyboardCleanTool"
-keyboard-maestro:"Keyboard Maestro"
+keyboard-cleaner:KeyboardCleanTool
+keyboard-maestro:Keyboard Maestro
 knockknock:KnockKnock
-lingon-x:"Lingon X"
+lingon-x:Lingon X
 loopback:Loopback
 makemkv:MakeMKV
 netiquette:Netiquette
 obsidian:Obsidian
 onyx:OnyX
 plex
-private-internet-access:"Private Internet Access"
-qmk-toolbox:"QMK Toolbox"
+private-internet-access:Private Internet Access
+qmk-toolbox:QMK Toolbox
 rectangle:Rectangle
 retrobatch:Retrobatch
 rightfont:RightFont
@@ -55,5 +56,5 @@ todoist:Todoist
 topnotch:TopNotch
 transmission:Transmission
 transmit:Transmit
-visual-studio-code:"Visual Studio Code"
+visual-studio-code:Visual Studio Code
 zed:Zed
