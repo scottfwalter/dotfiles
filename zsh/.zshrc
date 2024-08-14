@@ -216,7 +216,7 @@ export PATH="/Users/scott/.rd/bin:$PATH"
 #[[ -f "$HOME/fig-export/dotfiles/dotfile.zsh" ]] && builtin source "$HOME/fig-export/dotfiles/dotfile.zsh"
 
 
-if [ -z "$TMUX" ] && [ "$TERM" = "xterm-kitty" ]; then
+if [ -z "$TMUX" ] && [[ "$TERM" = "xterm-kitty" || -n "$WEZTERM_CONFIG_FILE" ]]; then
   #tmux attach || exec tmux new-session && exit;
   tmux attach || tmux
 fi
