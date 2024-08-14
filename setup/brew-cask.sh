@@ -12,11 +12,9 @@ while read p; do
 	cask=$(echo "$p" | cut -d ":" -f 1)
    	applicationName=$(echo "$p" | cut -d ":" -f 2)
 
-	#rc=$(brew list --casks $p >/dev/null 2>&1)
-	#echo "$p with $?"
-
 	if [ "$cask" != "$applicationName" ]; then
-		if $(find /Applications -name "$applicationName*.app" -maxdepth 1 > /dev/null 2>&1); then
+		echo "Checking $applicationName"
+		if $(find /Applications -name "$applicationName*.app" -maxdepth 1 | grep . > /dev/null 2>&1); then
 			echo "$cask as it already installed in /Applications, skipping..."
 			continue
 		fi
