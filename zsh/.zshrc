@@ -215,10 +215,10 @@ export PATH="/Users/scott/.rd/bin:$PATH"
 
 #[[ -f "$HOME/fig-export/dotfiles/dotfile.zsh" ]] && builtin source "$HOME/fig-export/dotfiles/dotfile.zsh"
 
-
 if [ -z "$TMUX" ] && [[ "$TERM" = "xterm-kitty" || -n "$WEZTERM_CONFIG_FILE" ]]; then
-  #tmux attach || exec tmux new-session && exit;
-  tmux attach || tmux
+  if ! tmux has-session -t main > /dev/null 2>&1; then
+	  tmux attach -d -t main || tmux new -s main
+  fi
 fi
 
 # Amazon Q post block. Keep at the bottom of this file.
