@@ -3,7 +3,7 @@
 # Enable case-insensitive globbing
 shopt -s nocaseglob
 
-for FILE in "."/*.eps; do
+for FILE in "."/**/*.eps; do
   filename=$(basename "$FILE")
   #extension=${filename##*.}
   filename_noext=${filename%.*}
@@ -12,7 +12,7 @@ for FILE in "."/*.eps; do
   echo $filename
   echo $filename_noext
 
-  inkscape -o "$filename_noext".svg "$filename"
+  inkscape -o "$filename_noext".svg "$FILE"
 done
 
 # Disable case-insensitive globbing
