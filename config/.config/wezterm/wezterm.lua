@@ -142,5 +142,11 @@ config.skip_close_confirmation_for_processes_named = {
 	"btop",
 }
 
+
+wezterm.plugin
+      .require('https://github.com/yriveiro/wezterm-tabs')
+      .apply_to_config(config)
+
+
 -- and finally, return the configuration to wezterm
 return config
