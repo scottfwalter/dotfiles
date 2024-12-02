@@ -38,6 +38,7 @@ jsonpp
 kitty
 lazydocker
 lazygit
+llm
 luarocks
 mailsy
 marta
@@ -64,6 +65,7 @@ tmux
 toilet
 trdsql
 tree
+uv
 wakeonlan
 wezterm
 wifi-password
