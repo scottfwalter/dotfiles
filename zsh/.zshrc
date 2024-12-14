@@ -2,7 +2,7 @@
 [[ -f "${HOME}/Library/Application Support/amazon-q/shell/zshrc.pre.zsh" ]] && builtin source "${HOME}/Library/Application Support/amazon-q/shell/zshrc.pre.zsh"
 # GITSTATUS_LOG_LEVEL=DEBUG
 
-
+export HOMEBREW_BREWFILE=~/.config/brewfile/Brewfile
 
 #################################
 # Basic options
