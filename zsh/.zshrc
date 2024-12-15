@@ -15,7 +15,7 @@ unsetopt correct_all
 #################################
 # Misc variables
 #################################
-export CXONE=/Volumes/T16-Skyhopper/cxone
+export CXONE=/Volumes/Tardis/cxone
 
 #################################
 # Man Pager
