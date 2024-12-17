@@ -143,6 +143,7 @@ cask "private-internet-access"
 cask "retrobatch", args: { appdir: "/Applications" }
 cask "screenflow", args: { appdir: "/Applications" }
 cask "shortcat"
+cask "ticktick"
 cask "topnotch"
 cask "transmission", args: { appdir: "/Applications" }
 cask "wezterm"
