@@ -115,30 +115,86 @@ cask "1password-cli", args: { appdir: "/Applications" }
 cask "a-better-finder-rename", args: { appdir: "/Applications" }
 cask "affinity-photo", args: { appdir: "/Applications" }
 cask "affinity-publisher", args: { appdir: "/Applications" }
-cask "alacritty"
+cask "airfoil"
 cask "applite"
 cask "audio-hijack", args: { appdir: "/Applications" }
+cask "avast-security"
+cask "backblaze"
 cask "bunch", args: { appdir: "/Applications" }
+cask "canva"
+cask "google-chrome"
 cask "devtoys", args: { appdir: "/Applications" }
 cask "dropzone", args: { appdir: "/Applications" }
 cask "elgato-stream-deck", args: { appdir: "/Applications" }
 cask "fujitsu-scansnap-home", args: { appdir: "/Applications" }
 cask "inkscape"
 cask "jordanbaird-ice"
+cask "keyboard-cleaner"
 cask "kitty"
 cask "knockknock", args: { appdir: "/Applications" }
 cask "loopback", args: { appdir: "/Applications" }
 cask "makemkv", args: { appdir: "/Applications" }
+cask "monitorcontrol"
 cask "moom", args: { appdir: "/Applications" }
 cask "onyx", args: { appdir: "/Applications" }
 cask "plex", args: { appdir: "/Applications" }
 cask "qmk-toolbox", args: { appdir: "/Applications" }
-cask "radio-silence", args: { appdir: "/Applications" }
+cask "private-internet-access"
 cask "retrobatch", args: { appdir: "/Applications" }
 cask "screenflow", args: { appdir: "/Applications" }
 cask "shortcat"
+cask "topnotch"
 cask "transmission", args: { appdir: "/Applications" }
 cask "wezterm"
+mas "1Blocker", id: 1365531024
+mas "Audio Book Builder", id: 1437681957
+mas "Blackmagic Disk Speed Test", id: 425264550
+mas "Boop",id: 1518425043
+mas "Calca",id: 635758264
+mas "Color Slurp",id: 1287239339
+mas "Color Squid", id: 1057705278
+mas "Color Folders", id: 1576476152
+mas "Daisy Disk", id: 411643860
+mas "Dato", id: 1470584107
+mas "Dropover", id: 1355679052
+mas "Final Cut Pro",id: 424389933
+mas "Garage Band", id: 682658836
+mas "Good Notes", id: 1444383602
+mas "Grammarly", id: 1462114288
+mas "Harmony Bridge", id: 1450752761
+mas "Home Designer 3D", id: 955414427
+mas "Hyperducks", id: 6444667067
+mas "Kindle", id: 302584613
+mas "Logger for Shortcuts",id:1611554653
+mas "Obsidian Web Clipper", id:6720708363
+mas "Kompressor", id: 6468196574
+mas "Marked Down", id: 1554029832
+mas "Marked 2", id: 890031187
+mas "Menubar x", id: 1575588022
+mas "Meta Image", id: 1397099749
+mas "Metapho", id: 914457352
+mas "Mind Node", id: 1289197285
+mas "Motion", id: 434290957
+mas "Mp3 Tag", id: 1532597159
+mas "Obsidian Web Clipper", id: 6720708363
+mas "OmniGraffle", id: 1142578753
+mas "Paprika", id: 1303222628
+mas "PDF Viewer", id: 1120099014
+mas "PDF Gear", id: 6469021132
+mas "Pixelmator Pro", id: 1289583905
+mas "Photomator", id: 1444636541
+mas "Pure Paste", id: 1611378436
+mas "QR Capture", id: 1369524274
+mas "Secure Shell Fish", id: 1336634154
+mas "Sharebot", id: 1597340986
+mas "Shareful", id: 1522267256
+mas "Spark",id: 6445813049
+mas "Subtrack", id: 1519946553
+mas "The Unarchiver",id: 425424353
+mas "Video File List", id: 1263472847
+mas "Xscope", id: 889428659
+mas "XCode", id:497799835
+
 vscode "adpyke.codesnap"
 vscode "akarlsten.vscode-snazzy-akarlsten"
 vscode "alefragnani.bookmarks"
