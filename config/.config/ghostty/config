@@ -1,0 +1,11 @@
+background-opacity = 0.85
+background-blur-radius = 0
+font-family = BerkeleyMono Nerd Font
+font-size = 16
+mouse-hide-while-typing = true
+mouse-scroll-multiplier = 2
+#macos-titlebar-style = hidden
+window-padding-balance = true
+window-save-state = always
+window-colorspace = "display-p3"
+
