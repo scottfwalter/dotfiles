@@ -215,7 +215,7 @@ export PATH="/Users/scott/.rd/bin:$PATH"
 
 #[[ -f "$HOME/fig-export/dotfiles/dotfile.zsh" ]] && builtin source "$HOME/fig-export/dotfiles/dotfile.zsh"
 
-if [ -z "$TMUX" ] && [[ "$TERM" = "xterm-kitty" || -n "$WEZTERM_CONFIG_FILE" ]]; then
+if [ -z "$TMUX" ] && [[ "$TERM" = "xterm-kitty" || "$TERM" = "xterm-ghostty" || -n "$WEZTERM_CONFIG_FILE" ]]; then
   if ! tmux list-sessions | grep -q -E '^main.*\(attached\)$'; then
 	  tmux attach -d -t main || tmux new -s main
   fi
