@@ -1,6 +1,6 @@
 [user]
 	name = Scott Walter
-	email = scott.walter@nice.com
+	email = scott@scottwalter.com
 [core]
 	quotepath = false
 	autocrlf = false
@@ -56,3 +56,11 @@
 	helper = osxkeychain
 [init]
 	defaultBranch = main
+
+[includeIf "hasconfig:remote.*.url:https://github.com/nice-cxone/**/*"]
+	path = ~/.gitconfig-nice
+
+[includeIf "hasconfig:remote.*.url:https://scottfwalter:*/scottfwalter/**/*"]
+	path = ~/.gitconfig-dotfiles
+
+	path = ~/.gitconfig-nice
