@@ -19,6 +19,7 @@ brew "cowsay"
 brew "dasel"
 brew "diff-so-fancy"
 brew "difftastic"
+brew "dockutil"
 brew "duf"
 brew "entr"
 brew "eza"
@@ -113,6 +114,7 @@ brew "noahgorstein/tap/jqp"
 brew "noborus/tap/trdsql"
 brew "orangekame3/tap/paclear"
 brew "teamookla/speedtest/speedtest"
+cask "1password", args: { appdir: "/Applications" }
 cask "1password-cli", args: { appdir: "/Applications" }
 cask "a-better-finder-rename", args: { appdir: "/Applications" }
 cask "affinity-photo", args: { appdir: "/Applications" }
