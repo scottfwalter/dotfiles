@@ -203,7 +203,8 @@ export BAT_THEME=Dracula
 #################################
 # Banner
 #################################
-neofetch
+#neofetch
+fastfetch
 
 #---- Zoxide (better cd)
 eval "$(zoxide init zsh)"
