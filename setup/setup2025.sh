@@ -1,13 +1,15 @@
 # Install brew
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
+# Get dotfiles
+git clone https://github.com/scottfwalter/dotfiles.git ~/dotfiles
+
 # Initialize Dot Files
 brew install stow
 /opt/homebrew/bin/stow -d ~/dotfiles -t ~/ bash bin brew config csh duckdns finicky git prettier sh ssh tcsh tmux vim zsh
 
 # Install packages
 brew bundle --global
-
 
 # create LaunchAgents dir
 mkdir -p ~/Library/LaunchAgents
