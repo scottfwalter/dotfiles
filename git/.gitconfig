@@ -62,5 +62,3 @@
 
 [includeIf "hasconfig:remote.*.url:https://scottfwalter:*/scottfwalter/**/*"]
 	path = ~/.gitconfig-dotfiles
-
-	path = ~/.gitconfig-nice
