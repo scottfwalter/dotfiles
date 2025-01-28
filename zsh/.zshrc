@@ -104,7 +104,7 @@ export HOMEBREW_PREFIX="$(brew --prefix)"
 #################################
 # Source Additional Files
 #################################
-files=('.zshrc_alias_functions' '.zshrc_colors' )
+files=('.zshrc_alias_functions' '.zshrc_colors' '.zshrc_tokens' )
 for f in $files; do
   . ~/$f
 done
