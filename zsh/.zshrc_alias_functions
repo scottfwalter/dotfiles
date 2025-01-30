@@ -17,6 +17,7 @@ alias sed="gsed"
 alias weather="curl https://wttr.in"
 alias zreload=". ~/.zshrc"
 alias obsidian="cd $HOME/Obsidian/My\ Second\ Brain/.obsidian"
+alias marked="open /Applications/Marked\ 2.app "
 
 function on_mac() {
 	[[ $(uname -a | grep -c "Darwin") -eq 1 ]]
