@@ -7,9 +7,7 @@ export HOMEBREW_BREWFILE=~/.config/brewfile/Brewfile
 #################################
 # Basic options
 #################################
-setopt AUTO_CD
-setopt NO_CASE_GLOB
-setopt GLOB_COMPLETE
+setopt AUTO_CD NO_CASE_GLOB GLOB_COMPLETE
 unsetopt correct_all
 
 #################################

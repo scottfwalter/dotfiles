@@ -191,7 +191,6 @@ mas "PDF Viewer", id: 1120099014
 mas "PDF Gear", id: 6469021132
 mas "Pixelmator Pro", id: 1289583905
 mas "Photomator", id: 1444636541
-mas "Pure Paste", id: 1611378436
 mas "QR Capture", id: 1369524274
 mas "Secure Shell Fish", id: 1336634154
 mas "Sharebot", id: 1597340986
