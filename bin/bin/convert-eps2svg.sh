@@ -2,6 +2,7 @@
 
 # Enable case-insensitive globbing
 shopt -s nocaseglob
+set -x
 
 for FILE in "."/**/*.eps; do
   filename=$(basename "$FILE")
