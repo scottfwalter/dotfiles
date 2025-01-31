@@ -6,3 +6,6 @@ export PATH="/Users/scott/.rd/bin:$PATH"
 
 # Amazon Q post block. Keep at the bottom of this file.
 [[ -f "${HOME}/Library/Application Support/amazon-q/shell/bash_profile.post.bash" ]] && builtin source "${HOME}/Library/Application Support/amazon-q/shell/bash_profile.post.bash"
+
+# Added by LM Studio CLI (lms)
+export PATH="$PATH:/Users/scott/.lmstudio/bin"

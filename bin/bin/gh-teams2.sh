@@ -41,5 +41,5 @@ while true; do
         fi
 done
 
-printf '%s\n' "${all_teams[@]}" | sort
+printf '%s\n' "${all_teams[@]}" | sort --ignore-case
 
