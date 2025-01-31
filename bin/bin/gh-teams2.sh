@@ -1,6 +1,5 @@
 #!/bin/bash
 
-GITHUB_TOKEN="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"
 ORG="nice-cxone"
 
 total_teams=0
