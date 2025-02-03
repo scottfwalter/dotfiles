@@ -135,6 +135,7 @@ cask "dropzone", args: { appdir: "/Applications" }
 cask "elgato-stream-deck", args: { appdir: "/Applications" }
 cask "fujitsu-scansnap-home", args: { appdir: "/Applications" }
 cask "ghostty"
+cask "hyperkey"
 cask "inkscape"
 cask "jordanbaird-ice"
 cask "keyboard-cleaner"

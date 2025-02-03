@@ -1,7 +1,7 @@
 #!/bin/bash
 
 ORG="nice-cxone"
-
+echo $GITHUB_TOKEN
 total_teams=0
 current_page=1
 all_teams=()
