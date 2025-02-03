@@ -104,7 +104,9 @@ export HOMEBREW_PREFIX="$(brew --prefix)"
 #################################
 files=('.zshrc_alias_functions' '.zshrc_colors' '.zshrc_tokens' )
 for f in $files; do
-  . ~/$f
+  if [ -f $f ]; then
+  	. ~/$f
+  fi
 done
 
 #################################
