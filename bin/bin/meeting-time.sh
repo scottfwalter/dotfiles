@@ -15,6 +15,7 @@ fi
 
 locations=(
     "Utah:America/Denver"
+    "Dallas:America/Chicago"
     "Santiago:America/Santiago"
     "Israel:Asia/Jerusalem"
     "Pune:Asia/Kolkata"
