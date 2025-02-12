@@ -18,6 +18,7 @@ brew "difftastic"
 brew "dockutil"
 brew "duf"
 brew "entr"
+brew "exiftool"
 brew "eza"
 brew "fastfetch"
 brew "fd"
@@ -157,6 +158,7 @@ cask "ticktick"
 cask "topnotch"
 cask "transmission", args: { appdir: "/Applications" }
 cask "wezterm"
+cask "zed"
 mas "1Blocker", id: 1365531024
 mas "Audio Book Builder", id: 1437681957
 mas "Blackmagic Disk Speed Test", id: 425264550
@@ -169,6 +171,7 @@ mas "Daisy Disk", id: 411643860
 mas "Dato", id: 1470584107
 mas "Dropover", id: 1355679052
 mas "Final Cut Pro",id: 424389933
+mas "Folder Preview",id: 6698876601
 mas "Garage Band", id: 682658836
 mas "Good Notes", id: 1444383602
 mas "Grammarly", id: 1462114288
@@ -178,8 +181,9 @@ mas "Hyperducks", id: 6444667067
 mas "Kindle", id: 302584613
 mas "Logger for Shortcuts",id:1611554653
 mas "Obsidian Web Clipper", id:6720708363
-mas "Kompressor", id: 6468196574
-mas "Marked Down", id: 1554029832
+mas "Kompressor", id:6468196574
+mas "MarkDownload", id:1554029832
+mas "Markdown Preview",id:6739955340
 mas "Marked 2", id: 890031187
 mas "Menubar x", id: 1575588022
 mas "Meta Image", id: 1397099749
