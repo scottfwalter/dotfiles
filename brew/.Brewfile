@@ -130,6 +130,7 @@ cask "avast-security"
 cask "backblaze"
 cask "bunch", args: { appdir: "/Applications" }
 cask "canva"
+cask "chatwise"
 cask "google-chrome"
 cask "devtoys", args: { appdir: "/Applications" }
 cask "dropzone", args: { appdir: "/Applications" }
