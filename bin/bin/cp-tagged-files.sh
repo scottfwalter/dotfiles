@@ -24,8 +24,12 @@ for word in "${arr[@]}"; do
 
 done
 
+
+#mdfind "$combined"
 mdfind "$combined" | xargs -n 1 -L 1 -t -I {} cp "{}" "$2"
 #mdfind "$combined" | xargs -n 1 -L 1 -t -I {} cp "{}" $2 2>/dev/null
+
+exit 1
 
 find "$2" -type f -print0 | while IFS= read -r -d '' file; do
   xattr -w com.apple.metadata:_kMDItemUserTags '<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd"><plist version="1.0"><array/></plist>' "$file"
