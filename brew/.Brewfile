@@ -137,6 +137,7 @@ cask "dropzone", args: { appdir: "/Applications" }
 cask "elgato-stream-deck", args: { appdir: "/Applications" }
 cask "fujitsu-scansnap-home", args: { appdir: "/Applications" }
 cask "ghostty"
+cask "gpt4all"
 cask "hyperkey"
 cask "inkscape"
 cask "jordanbaird-ice"
@@ -179,6 +180,7 @@ mas "Grammarly", id: 1462114288
 mas "Harmony Bridge", id: 1450752761
 mas "Home Designer 3D", id: 955414427
 mas "Hyperducks", id: 6444667067
+mas "Infuse Video Player", id:1136220934
 mas "Kindle", id: 302584613
 mas "Logger for Shortcuts",id:1611554653
 mas "Obsidian Web Clipper", id:6720708363
