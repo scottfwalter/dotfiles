@@ -176,6 +176,7 @@ mas "Final Cut Pro",id: 424389933
 mas "Folder Preview",id: 6698876601
 mas "Garage Band", id: 682658836
 mas "Good Notes", id: 1444383602
+mas "Googly Eyes", id:6743048714
 mas "Grammarly", id: 1462114288
 mas "Harmony Bridge", id: 1450752761
 mas "Home Designer 3D", id: 955414427

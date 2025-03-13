@@ -1,0 +1,5 @@
+echo "Configuring CXONE"
+export CXONE=/Volumes/Tardis/cxone
+
+alias cxone-docker="cd $CXONE/tools/container-platform-frontend"
+alias cxone-docker-shell="docker exec -i -t cxone-container /bin/bash"
