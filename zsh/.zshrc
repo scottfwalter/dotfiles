@@ -13,7 +13,6 @@ unsetopt correct_all
 #################################
 # Misc variables
 #################################
-export CXONE=/Volumes/Tardis/cxone
 
 #################################
 # Man Pager
@@ -102,10 +101,12 @@ export HOMEBREW_PREFIX="$(brew --prefix)"
 #################################
 # Source Additional Files
 #################################
-files=('.zshrc_alias_functions' '.zshrc_colors' '.zshrc_tokens' )
+files=('.zshrc_alias_functions' '.zshrc_colors' '.zshrc_tokens' '.zshrc_cxone' )
 for f in $files; do
-  if [ -f $f ]; then
+  if [ -f ~/$f ]; then
   	. ~/$f
+  else
+     echo "skipping $f"
   fi
 done
 
@@ -203,7 +204,6 @@ export BAT_THEME=Dracula
 #################################
 # Banner
 #################################
-#neofetch
 fastfetch
 
 #---- Zoxide (better cd)
