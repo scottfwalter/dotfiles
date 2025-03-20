@@ -1,0 +1,11 @@
+Neo Tree File System {leader}C-n NeoTree File System
+Neo Tree Buffers {leader}bf NeoTree Buffers
+
+Find files C-p
+Grep files {leader}fg
+Previous opened files {leader}{leader}
+
+Terminal {leader}t
+
+Emmet C-y,
+

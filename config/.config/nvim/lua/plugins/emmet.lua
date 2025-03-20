@@ -13,7 +13,7 @@ return {
     ft = { "html", "css", "javascript", "javascriptreact", "typescript", "typescriptreact", "vue", "svelte", "php" },
     config = function()
       -- Optional: Configure Emmet settings
-      vim.g.user_emmet_leader_key = '<C-y>' -- Default leader key
+      vim.g.user_emmet_leader_key = 'C-y' -- Default leader key
       -- vim.g.user_emmet_settings = { ... } -- Optional custom settings
     end,
   },
