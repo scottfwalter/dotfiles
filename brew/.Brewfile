@@ -159,6 +159,7 @@ cask "shortcat"
 cask "ticktick"
 cask "topnotch"
 cask "transmission", args: { appdir: "/Applications" }
+cask "utm"
 cask "wezterm"
 cask "zed"
 mas "1Blocker", id: 1365531024
