@@ -25,3 +25,5 @@ vim.wo.number = true
 --vim.keymap.set('i', ',.', '<C-y>,')
 
 vim.keymap.set('n', '<Esc>', function() vim.cmd('Noice dismiss') end, { desc = 'Dismiss Noice messages' })
+
+vim.keymap.set('n', '<leader>o',':!open %<CR>')
