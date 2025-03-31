@@ -1,4 +1,3 @@
-tap "homebrew/bundle"
 tap "noahgorstein/tap"
 tap "noborus/tap"
 tap "orangekame3/tap"
