@@ -22,6 +22,7 @@ fi
 # Brew
 if ! command -v brew &>/dev/null; then
   /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+  brew eval
 else
   echo "Brew already installed skipping."
 fi
@@ -44,7 +45,7 @@ fi
 /opt/homebrew/bin/stow -d ~/dotfiles -t ~/ bash bin brew config csh duckdns finicky git prettier sh ssh tcsh tmux vim zsh
 
 # Install packages
-#brew bundle --global
+brew bundle --global
 
 echo -e "Installing npm packages..."
 
