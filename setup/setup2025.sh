@@ -221,6 +221,12 @@ defaults write com.apple.finder "ShowMountedServersOnDesktop" -bool "true"
 defaults write com.apple.WindowManager EnableStandardClickToShowDesktop -int 0
 
 ##########
+# Windows
+##########
+defaults write -g AppleWindowTilingMarginsEnabled -bool false
+defaults write NSGlobalDomain AppleActionOnDoubleClick -string "Maximize"
+
+##########
 # Keyboard
 ##########
 
