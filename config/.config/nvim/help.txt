@@ -10,3 +10,9 @@ Terminal {leader}t
 
 Emmet C-y,
 
+Trouble
+All files {leader}x
+All files {leader}x
+
+
+
