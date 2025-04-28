@@ -218,7 +218,9 @@ export PATH="/Users/scott/.rd/bin:$PATH"
 
 if [ -z "$TMUX" ] && [[ "$TERM" = "xterm-kitty" || "$TERM" = "xterm-ghostty" || -n "$WEZTERM_CONFIG_FILE" ]]; then
   if ! tmux list-sessions | grep -q -E '^main.*\(attached\)$'; then
-	  tmux attach -d -t main || tmux new -s main
+      if ! tmux attach -d -t main; then
+          tmux new -s main  \; rename-window "Main" \; split-window -h -p40 \; split-window -t1 -v -p30 \; new-window -n "Scratchpad" \; select-window -t :0
+      fi
   fi
 fi
 
