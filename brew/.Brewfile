@@ -2,6 +2,7 @@ tap "noahgorstein/tap"
 tap "noborus/tap"
 tap "orangekame3/tap"
 tap "teamookla/speedtest"
+
 brew "aom"
 brew "bash"
 brew "bat"
@@ -115,8 +116,8 @@ brew "xh"
 brew "yazi"
 brew "yq"
 brew "yt-dlp"
-brew "yt-dlp"
 brew "zoxide"
+
 cask "1password", args: { appdir: "/Applications" }
 cask "1password-cli", args: { appdir: "/Applications" }
 cask "a-better-finder-rename", args: { appdir: "/Applications" }
@@ -130,12 +131,12 @@ cask "backblaze"
 cask "bunch", args: { appdir: "/Applications" }
 cask "canva"
 cask "chatwise"
-cask "google-chrome"
 cask "devtoys", args: { appdir: "/Applications" }
 cask "dropzone", args: { appdir: "/Applications" }
 cask "elgato-stream-deck", args: { appdir: "/Applications" }
 cask "fujitsu-scansnap-home", args: { appdir: "/Applications" }
 cask "ghostty"
+cask "google-chrome"
 cask "gpt4all"
 cask "hyperkey"
 cask "inkscape"
@@ -150,8 +151,8 @@ cask "moom", args: { appdir: "/Applications" }
 cask "ollama"
 cask "onyx", args: { appdir: "/Applications" }
 cask "plex", args: { appdir: "/Applications" }
-cask "qmk-toolbox", args: { appdir: "/Applications" }
 cask "private-internet-access"
+cask "qmk-toolbox", args: { appdir: "/Applications" }
 cask "retrobatch", args: { appdir: "/Applications" }
 cask "screenflow", args: { appdir: "/Applications" }
 cask "shortcat"
@@ -161,14 +162,15 @@ cask "transmission", args: { appdir: "/Applications" }
 cask "utm"
 cask "wezterm"
 cask "zed"
+
 mas "1Blocker", id: 1365531024
 mas "Audio Book Builder", id: 1437681957
 mas "Blackmagic Disk Speed Test", id: 425264550
 mas "Boop",id: 1518425043
 mas "Calca",id: 635758264
+mas "Color Folders", id: 1576476152
 mas "Color Slurp",id: 1287239339
 mas "Color Squid", id: 1057705278
-mas "Color Folders", id: 1576476152
 mas "Daisy Disk", id: 411643860
 mas "Dato", id: 1470584107
 mas "Dropover", id: 1355679052
@@ -183,9 +185,8 @@ mas "Home Designer 3D", id: 955414427
 mas "Hyperducks", id: 6444667067
 mas "Infuse Video Player", id:1136220934
 mas "Kindle", id: 302584613
-mas "Logger for Shortcuts",id:1611554653
-mas "Obsidian Web Clipper", id:6720708363
 mas "Kompressor", id:6468196574
+mas "Logger for Shortcuts",id:1611554653
 mas "MarkDownload", id:1554029832
 mas "Markdown Preview",id:6739955340
 mas "Marked 2", id: 890031187
@@ -196,12 +197,13 @@ mas "Mind Node", id: 1289197285
 mas "Motion", id: 434290957
 mas "Mp3 Tag", id: 1532597159
 mas "Obsidian Web Clipper", id: 6720708363
+mas "Obsidian Web Clipper", id:6720708363
 mas "OmniGraffle", id: 1142578753
-mas "Paprika", id: 1303222628
-mas "PDF Viewer", id: 1120099014
 mas "PDF Gear", id: 6469021132
-mas "Pixelmator Pro", id: 1289583905
+mas "PDF Viewer", id: 1120099014
+mas "Paprika", id: 1303222628
 mas "Photomator", id: 1444636541
+mas "Pixelmator Pro", id: 1289583905
 mas "QR Capture", id: 1369524274
 mas "Secure Shell Fish", id: 1336634154
 mas "Sharebot", id: 1597340986
@@ -210,61 +212,5 @@ mas "Spark",id: 6445813049
 mas "Subtrack", id: 1519946553
 mas "The Unarchiver",id: 425424353
 mas "Video File List", id: 1263472847
-mas "Xscope", id: 889428659
 mas "XCode", id:497799835
-
-vscode "adpyke.codesnap"
-vscode "akarlsten.vscode-snazzy-akarlsten"
-vscode "alefragnani.bookmarks"
-vscode "alefragnani.project-manager"
-vscode "amazonwebservices.codewhisperer-for-command-line-companion"
-vscode "angular.ng-template"
-vscode "bierner.markdown-preview-github-styles"
-vscode "bito.bito"
-vscode "cssho.vscode-svgviewer"
-vscode "csstools.postcss"
-vscode "dbaeumer.vscode-eslint"
-vscode "donjayamanne.githistory"
-vscode "dracula-theme.theme-dracula"
-vscode "eamodio.gitlens"
-vscode "esbenp.prettier-vscode"
-vscode "exodiusstudios.comment-anchors"
-vscode "firefox-devtools.vscode-firefox-debug"
-vscode "formulahendry.auto-rename-tag"
-vscode "github.copilot"
-vscode "github.copilot-chat"
-vscode "github.github-vscode-theme"
-vscode "github.vscode-pull-request-github"
-vscode "humao.rest-client"
-vscode "jaredkent.laserwave"
-vscode "johnpapa.angular2"
-vscode "johnpapa.vscode-peacock"
-vscode "mike-co.import-sorter"
-vscode "mrmlnc.vscode-duplicate"
-vscode "ms-playwright.playwright"
-vscode "ms-vscode-remote.remote-containers"
-vscode "ms-vscode-remote.remote-ssh"
-vscode "ms-vscode-remote.remote-ssh-edit"
-vscode "ms-vscode.remote-explorer"
-vscode "orta.vscode-twoslash-queries"
-vscode "phoenisx.cssvar"
-vscode "pranaygp.vscode-css-peek"
-vscode "redhat.vscode-xml"
-vscode "richie5um2.vscode-sort-json"
-vscode "ritwickdey.liveserver"
-vscode "ronnidc.nunjucks"
-vscode "samrapdev.outrun"
-vscode "sdras.night-owl"
-vscode "sjuulwijnia.kx-vscode-angular-context-creator"
-vscode "sonarsource.sonarlint-vscode"
-vscode "spywhere.guides"
-vscode "stylelint.vscode-stylelint"
-vscode "techer.open-in-browser"
-vscode "timonwong.shellcheck"
-vscode "tyriar.sort-lines"
-vscode "visualstudioexptteam.intellicode-api-usage-examples"
-vscode "visualstudioexptteam.vscodeintellicode"
-vscode "waderyan.gitblame"
-vscode "wesbos.theme-cobalt2"
-vscode "wicked-labs.wvsc-serendipity"
-vscode "zignd.html-css-class-completion"
+mas "Xscope", id: 889428659
