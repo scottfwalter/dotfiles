@@ -10,12 +10,12 @@ vim.opt.clipboard = "unnamedplus"
 vim.opt.swapfile = false
 
 -- Navigate vim panes better
-vim.keymap.set('n', '<c-k>', ':wincmd k<CR>')
-vim.keymap.set('n', '<c-j>', ':wincmd j<CR>')
-vim.keymap.set('n', '<c-h>', ':wincmd h<CR>')
-vim.keymap.set('n', '<c-l>', ':wincmd l<CR>')
+vim.keymap.set("n", "<c-k>", ":wincmd k<CR>")
+vim.keymap.set("n", "<c-j>", ":wincmd j<CR>")
+vim.keymap.set("n", "<c-h>", ":wincmd h<CR>")
+vim.keymap.set("n", "<c-l>", ":wincmd l<CR>")
 
-vim.keymap.set('n', '<leader>h', ':nohlsearch<CR>')
+vim.keymap.set("n", "<leader>h", ":nohlsearch<CR>")
 vim.wo.number = true
 
 --vim.imap ,, <C-y>,
@@ -24,6 +24,18 @@ vim.wo.number = true
 --vim.api.nvim_set_keymap('i', ',,', '<C-y>,', { noremap = true })
 --vim.keymap.set('i', ',.', '<C-y>,')
 
-vim.keymap.set('n', '<Esc>', function() vim.cmd('Noice dismiss') end, { desc = 'Dismiss Noice messages' })
+vim.keymap.set("n", "<Esc>", function()
+  vim.cmd("Noice dismiss")
+end, { desc = "Dismiss Noice messages" })
 
-vim.keymap.set('n', '<leader>o',':!open %<CR>')
+vim.keymap.set("n", "<leader>o", ":!open %<CR>")
+
+local esc = vim.api.nvim_replace_termcodes("<Esc>", true, true, true)
+vim.api.nvim_create_augroup("JSLogMacro", { clear = true })
+vim.api.nvim_create_autocmd("FileType", {
+  group = "JSLogMacro",
+  pattern = { "javascript", "typescript" },
+  callback = function()
+    vim.fn.setreg("l", "yoconsole.log('" .. esc .. "pa:" .. esc .. "la, " .. esc .. "pl")
+  end,
+})
