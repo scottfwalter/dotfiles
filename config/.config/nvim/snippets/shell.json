@@ -1,0 +1,8 @@
+{
+  "Sehll Script": {
+    "prefix": "sh",
+    "body": [
+      "#!/bin/bash"
+    ]
+  }
+}

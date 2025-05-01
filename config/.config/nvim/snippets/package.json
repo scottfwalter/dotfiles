@@ -5,6 +5,15 @@
       {
         "language": "javascript",
         "path": "./javascript.json"
+      },
+      {
+        "language": [
+          "shellscript",
+          "shell",
+          "sh",
+          "zsh"
+        ],
+        "path": "./shell.json"
       }
     ]
   }

@@ -11,7 +11,7 @@ return {
     lazy = false,
     config = function()
       require("mason-lspconfig").setup({
-        ensure_installed = { "lua_ls", "ts_ls", "eslint", "emmet_language_server", "angularls", "html-lsp"}
+        ensure_installed = { "lua_ls", "ts_ls", "eslint", "emmet_language_server", "angularls", "html" },
       })
     end,
   },
@@ -19,27 +19,50 @@ return {
     "neovim/nvim-lspconfig",
     lazy = false,
     config = function()
-      local capabilities = require('cmp_nvim_lsp').default_capabilities()
+      local capabilities = require("cmp_nvim_lsp").default_capabilities()
 
       local lspconfig = require("lspconfig")
       lspconfig.ts_ls.setup({
-        capabilities = capabilities
+        capabilities = capabilities,
       })
       lspconfig.solargraph.setup({
-        capabilities = capabilities
+        capabilities = capabilities,
       })
       lspconfig.html.setup({
-        capabilities = capabilities
+        capabilities = capabilities,
       })
       lspconfig.lua_ls.setup({
-        capabilities = capabilities
+        capabilities = capabilities,
       })
 
       vim.keymap.set("n", "K", vim.lsp.buf.hover, {})
       vim.keymap.set("n", "<leader>gd", vim.lsp.buf.definition, {})
       vim.keymap.set("n", "<leader>gr", vim.lsp.buf.references, {})
       vim.keymap.set("n", "<leader>ca", vim.lsp.buf.code_action, {})
+
+      lspconfig.emmet_language_server.setup({
+        filetypes = {
+          "astro",
+          "css",
+          "eruby",
+          "html",
+          "javascript",
+          "javascriptreact",
+          "less",
+          "php",
+          "pug",
+          "sass",
+          "scss",
+          "typescriptreact",
+        },
+        init_options = {
+          html = {
+            options = {
+              ["bem.enabled"] = true,
+            },
+          },
+        },
+      })
     end,
   },
 }
-
