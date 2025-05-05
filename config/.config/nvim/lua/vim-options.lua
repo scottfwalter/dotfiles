@@ -15,7 +15,18 @@ vim.keymap.set("n", "<c-j>", ":wincmd j<CR>")
 vim.keymap.set("n", "<c-h>", ":wincmd h<CR>")
 vim.keymap.set("n", "<c-l>", ":wincmd l<CR>")
 
-vim.keymap.set("n", "<leader>h", ":nohlsearch<CR>")
+vim.keymap.set("n", "<F3>", ":nohlsearch<CR>")
+
+--Move single lines
+vim.keymap.set("n", "<A-k>", ":m-2<CR>")
+vim.keymap.set("n", "<A-j>", ":m+<CR>")
+
+-- Move multiple lines in visual mode
+vim.keymap.set("v", "<A-k>", ":m '<-2<CR>gv=gv")
+vim.keymap.set("v", "<A-j>", ":m '>+1<CR>gv=gv")
+--vnoremap <A-k> :m '<-2<CR>gv=gv
+--vnoremap <A-j> :m '>+1<CR>gv=gvars
+
 vim.wo.number = true
 
 --vim.imap ,, <C-y>,
@@ -25,7 +36,7 @@ vim.wo.number = true
 --vim.keymap.set('i', ',.', '<C-y>,')
 
 vim.keymap.set("n", "<Esc>", function()
-  vim.cmd("Noice dismiss")
+	vim.cmd("Noice dismiss")
 end, { desc = "Dismiss Noice messages" })
 
 vim.keymap.set("n", "<leader>o", ":!open %<CR>")
@@ -33,9 +44,9 @@ vim.keymap.set("n", "<leader>o", ":!open %<CR>")
 local esc = vim.api.nvim_replace_termcodes("<Esc>", true, true, true)
 vim.api.nvim_create_augroup("JSLogMacro", { clear = true })
 vim.api.nvim_create_autocmd("FileType", {
-  group = "JSLogMacro",
-  pattern = { "javascript", "typescript" },
-  callback = function()
-    vim.fn.setreg("l", "yoconsole.log('" .. esc .. "pa:" .. esc .. "la, " .. esc .. "pl")
-  end,
+	group = "JSLogMacro",
+	pattern = { "javascript", "typescript" },
+	callback = function()
+		vim.fn.setreg("l", "yoconsole.log('" .. esc .. "pa:" .. esc .. "la, " .. esc .. "pl")
+	end,
 })

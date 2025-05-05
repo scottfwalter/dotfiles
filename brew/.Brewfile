@@ -196,6 +196,7 @@ mas "Metapho", id: 914457352
 mas "Mind Node", id: 1289197285
 mas "Motion", id: 434290957
 mas "Mp3 Tag", id: 1532597159
+mas "Termix", id: 6739386670
 mas "Obsidian Web Clipper", id: 6720708363
 mas "Obsidian Web Clipper", id:6720708363
 mas "OmniGraffle", id: 1142578753
