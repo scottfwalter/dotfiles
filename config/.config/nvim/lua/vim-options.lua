@@ -57,3 +57,49 @@ vim.api.nvim_set_keymap("c", "<Up>", 'v:lua.get_wildmenu_key("<left>", "<up>")',
 function _G.get_wildmenu_key(key_wildmenu, key_regular)
 	return vim.fn.wildmenumode() ~= 0 and key_wildmenu or key_regular
 end
+
+local macro_group = vim.api.nvim_create_augroup("macro", { clear = true })
+local cursorline = nil
+
+-- vim.api.nvim_create_autocmd("RecordingEnter", {
+--   group = macro_group,
+--   callback = function()
+--     --local palette = require("catppuccin.palettes").get_palette("mocha")
+--
+--     cursorline = vim.api.nvim_get_hl(0, { name = "CursorLine" })
+--     --vim.api.nvim_set_hl(0, "CursorLine", { bg = palette.maroon, fg = palette.crust })
+--     vim.api.nvim_set_hl(0, "CursorLine", {
+--       bg = "#f0e6d2",
+--       fg = "#000000",
+--       bold = true,
+--     })
+--   end,
+-- })
+--
+-- vim.api.nvim_create_autocmd("RecordingLeave", {
+--   group = macro_group,
+--   callback = function()
+--     if cursorline ~= nil then
+--       vim.api.nvim_set_hl(0, "CursorLine", cursorline)
+--     end
+--   end,
+-- })
+--
+vim.o.showmode = true
+
+vim.api.nvim_create_autocmd("RecordingEnter", {
+	pattern = "*",
+	callback = function()
+		vim.cmd("redrawstatus")
+	end,
+})
+
+-- Autocmd to track the end of macro recording
+vim.api.nvim_create_autocmd("RecordingLeave", {
+	pattern = "*",
+	callback = function()
+		vim.cmd("redrawstatus")
+	end,
+})
+
+vim.opt.splitright = true
