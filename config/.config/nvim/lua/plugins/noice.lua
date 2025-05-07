@@ -14,6 +14,7 @@ return {
       view_search = false,
     },
     presets = {
+      bottom_search = true,
       command_palette = true,
       long_message_to_split = true,
       lsp_doc_border = true,
@@ -21,11 +22,35 @@ return {
     routes = {
       {
         filter = {
+          --event = "msg_show",
+          event = "msg_showmode",
+          --kind = "",
+          find = "@recording",
+        },
+        opts = { skip = false },
+      },
+      {
+        filter = {
           event = "msg_show",
           kind = "",
           find = "@recording",
         },
         opts = { skip = false },
+      },
+    },
+    -- Use 'notify' or 'mini' view to make it more visible
+    views = {
+      cmdline_popup = {
+        border = {
+          style = "rounded",
+        },
+      },
+      mini = {
+        timeout = 2000,
+        position = {
+          row = -2,
+          col = "50%",
+        },
       },
     },
   },

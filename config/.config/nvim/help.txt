@@ -1,4 +1,4 @@
-Neo Tree File System {leader}C-n NeoTree File System
+Neo Tree File System C-n NeoTree File System
 Neo Tree Buffers {leader}bf NeoTree Buffers
 
 Find files C-p
