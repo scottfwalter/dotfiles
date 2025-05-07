@@ -1,3 +1,4 @@
 .DS_Store
 config/.config/nvim/lazy-lock.json
+config/.config/github-copilot/versions.json
 
