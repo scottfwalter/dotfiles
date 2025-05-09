@@ -139,6 +139,7 @@ cask "ghostty"
 cask "google-chrome"
 cask "gpt4all"
 cask "hyperkey"
+cask "imageoptim"
 cask "inkscape"
 cask "jordanbaird-ice"
 cask "keyboard-cleaner"
@@ -204,6 +205,7 @@ mas "PDF Gear", id: 6469021132
 mas "PDF Viewer", id: 1120099014
 mas "Paprika", id: 1303222628
 mas "Photomator", id: 1444636541
+mas "Photoresize Pro", id:536956866
 mas "Pixelmator Pro", id: 1289583905
 mas "QR Capture", id: 1369524274
 mas "Secure Shell Fish", id: 1336634154
