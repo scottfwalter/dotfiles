@@ -102,4 +102,9 @@ vim.api.nvim_create_autocmd("RecordingLeave", {
 	end,
 })
 
+vim.api.nvim_create_user_command("ToggleHints", function()
+	local current = vim.diagnostic.config().virtual_text
+	vim.diagnostic.config({ virtual_text = not current })
+	print("Virtual text: " .. (not current and "enabled" or "disabled"))
+end, {})
 vim.opt.splitright = true
