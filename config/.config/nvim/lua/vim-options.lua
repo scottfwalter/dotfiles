@@ -36,7 +36,7 @@ vim.wo.number = true
 --vim.keymap.set('i', ',.', '<C-y>,')
 
 vim.keymap.set("n", "<Esc>", function()
-	vim.cmd("Noice dismiss")
+  vim.cmd("Noice dismiss")
 end, { desc = "Dismiss Noice messages" })
 
 vim.keymap.set("n", "<leader>o", ":!open %<CR>")
@@ -44,18 +44,18 @@ vim.keymap.set("n", "<leader>o", ":!open %<CR>")
 local esc = vim.api.nvim_replace_termcodes("<Esc>", true, true, true)
 vim.api.nvim_create_augroup("JSLogMacro", { clear = true })
 vim.api.nvim_create_autocmd("FileType", {
-	group = "JSLogMacro",
-	pattern = { "javascript", "typescript" },
-	callback = function()
-		vim.fn.setreg("l", "yoconsole.log('" .. esc .. "pa:" .. esc .. "la, " .. esc .. "pl")
-	end,
+  group = "JSLogMacro",
+  pattern = { "javascript", "typescript" },
+  callback = function()
+    vim.fn.setreg("l", "yoconsole.log('" .. esc .. "pa:" .. esc .. "la, " .. esc .. "pl")
+  end,
 })
 
 vim.api.nvim_set_keymap("c", "<Down>", 'v:lua.get_wildmenu_key("<right>", "<down>")', { expr = true })
 vim.api.nvim_set_keymap("c", "<Up>", 'v:lua.get_wildmenu_key("<left>", "<up>")', { expr = true })
 
 function _G.get_wildmenu_key(key_wildmenu, key_regular)
-	return vim.fn.wildmenumode() ~= 0 and key_wildmenu or key_regular
+  return vim.fn.wildmenumode() ~= 0 and key_wildmenu or key_regular
 end
 
 local macro_group = vim.api.nvim_create_augroup("macro", { clear = true })
@@ -88,23 +88,25 @@ local cursorline = nil
 vim.o.showmode = true
 
 vim.api.nvim_create_autocmd("RecordingEnter", {
-	pattern = "*",
-	callback = function()
-		vim.cmd("redrawstatus")
-	end,
+  pattern = "*",
+  callback = function()
+    vim.cmd("redrawstatus")
+  end,
 })
 
 -- Autocmd to track the end of macro recording
 vim.api.nvim_create_autocmd("RecordingLeave", {
-	pattern = "*",
-	callback = function()
-		vim.cmd("redrawstatus")
-	end,
+  pattern = "*",
+  callback = function()
+    vim.cmd("redrawstatus")
+  end,
 })
 
 vim.api.nvim_create_user_command("ToggleHints", function()
-	local current = vim.diagnostic.config().virtual_text
-	vim.diagnostic.config({ virtual_text = not current })
-	print("Virtual text: " .. (not current and "enabled" or "disabled"))
+  local current = vim.diagnostic.config().virtual_text
+  vim.diagnostic.config({ virtual_text = not current })
+  print("Virtual text: " .. (not current and "enabled" or "disabled"))
 end, {})
 vim.opt.splitright = true
+
+vim.opt.relativenumber = true
