@@ -4,6 +4,12 @@
 
 export HOMEBREW_BREWFILE=~/.config/brewfile/Brewfile
 
+if [[ -v NVIM ]]; then
+  FULL_SHELL=0
+else 
+  FULL_SHELL=1
+fi
+
 #################################
 # Basic options
 #################################
@@ -204,7 +210,9 @@ export BAT_THEME=Dracula
 #################################
 # Banner
 #################################
-fastfetch
+if [[ "$FULL_SHELL" -eq 1 ]]; then
+  fastfetch
+fi  
 
 #---- Zoxide (better cd)
 eval "$(zoxide init zsh)"
@@ -216,7 +224,7 @@ export PATH="/Users/scott/.rd/bin:$PATH"
 
 #[[ -f "$HOME/fig-export/dotfiles/dotfile.zsh" ]] && builtin source "$HOME/fig-export/dotfiles/dotfile.zsh"
 
-if [ -z "$TMUX" ] && [[ "$TERM" = "xterm-kitty" || "$TERM" = "xterm-ghostty" || -n "$WEZTERM_CONFIG_FILE" ]]; then
+if [[ "$FULL_SHELL" -eq 1 ]] && [ -z "$TMUX" ] && [[ "$TERM" = "xterm-kitty" || "$TERM" = "xterm-ghostty" || -n "$WEZTERM_CONFIG_FILE" ]]; then
   if ! tmux list-sessions | grep -q -E '^main.*\(attached\)$'; then
       if ! tmux attach -d -t main; then
           tmux new -s main  \; rename-window "Main" \; split-window -h -p40 \; split-window -t1 -v -p30 \; new-window -n "Scratchpad" \; select-window -t :0
