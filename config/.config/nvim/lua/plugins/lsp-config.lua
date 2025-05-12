@@ -12,6 +12,7 @@ return {
     config = function()
       require("mason-lspconfig").setup({
         ensure_installed = { "lua_ls", "ts_ls", "eslint", "emmet_language_server", "angularls", "html" },
+        --ensure_installed = { "lua_ls", "vtsls", "eslint", "emmet_language_server", "angularls", "html" },
       })
     end,
   },
