@@ -1,6 +1,5 @@
 return {
   "folke/snacks.nvim",
-  ---@type snacks.Config
   opts = {
 --    lazygit = {
 --      -- your lazygit configuration comes here
