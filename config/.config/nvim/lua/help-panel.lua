@@ -1,7 +1,7 @@
 -- Add this to your init.lua file or create a file in lua/plugins/
 
 -- Function to open a floating window with file contents
-function open_file_in_float(filename)
+local function open_file_in_float(filename)
   -- Get file content
   local lines = vim.fn.readfile(filename)
 
@@ -41,7 +41,7 @@ vim.keymap.set("n", "<leader>h", function()
 end, {desc = "Show My NeoVim Help"})
 
 -- Alternatively, to open the current file in a floating preview
-vim.keymap.set("n", "<leader>fp", function()
-  open_file_in_float(vim.fn.expand("%:p"))
-end, {desc = "Preview current file in float"})
+-- vim.keymap.set("n", "<leader>fp", function()
+--   open_file_in_float(vim.fn.expand("%:p"))
+-- end, {desc = "Preview current file in float"})
 
