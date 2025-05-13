@@ -110,3 +110,12 @@ end, {})
 vim.opt.splitright = true
 
 vim.opt.relativenumber = true
+
+vim.api.nvim_create_augroup("cursor_mark", { clear = true })
+vim.api.nvim_create_autocmd("CursorHold", {
+  group = "cursor_mark",
+  callback = function()
+    vim.cmd("normal! m'")
+  end,
+  desc = "Mark current position when cursor is held"
+})

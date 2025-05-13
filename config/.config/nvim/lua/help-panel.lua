@@ -27,10 +27,8 @@ function open_file_in_float(filename)
   vim.api.nvim_buf_set_lines(buf, 0, -1, false, lines)
 
   -- Open the window
-  local win = vim.api.nvim_open_win(buf, true, opts)
-
-  -- Optional: Set filetype to get syntax highlighting
-  vim.api.nvim_buf_set_option(buf, "filetype", vim.fn.fnamemodify(filename, ":e"))
+  --local win = vim.api.nvim_open_win(buf, true, opts)
+  vim.api.nvim_open_win(buf, true, opts)
 
   -- Close window with 'q' key
   vim.api.nvim_buf_set_keymap(buf, "n", "q", "<cmd>close<CR>", {noremap = true, silent = true})
