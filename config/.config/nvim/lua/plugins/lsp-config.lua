@@ -34,6 +34,17 @@ return {
       })
       lspconfig.lua_ls.setup({
         capabilities = capabilities,
+        settings = {
+          Lua = {
+            diagnostics = {
+              globals = { "vim", "Snacks" },
+            },
+            -- workspace = {
+            --   library = vim.api.nvim_get_runtime_file("", true),
+            --   checkThirdParty = false,
+            -- },
+          },
+        },
       })
 
       vim.keymap.set("n", "K", vim.lsp.buf.hover, {})
