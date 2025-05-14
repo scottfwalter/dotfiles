@@ -10,5 +10,19 @@
       " }",
       "}"
     ]
+  },
+  "scott": {
+    "prefix": "scott",
+    "body": [
+      "const scott = {",
+      "  name: 'Scott',",
+      "  age: 30,",
+      "  job: 'Developer',",
+      "  hobbies: ['coding', 'reading'],",
+      "  greet() {",
+      "    console.log(`Hello, my name is ${this.name}`);",
+      "  }",
+      "};"
+    ]
   }
 }
