@@ -56,3 +56,13 @@ vim.api.nvim_create_autocmd("CursorHold", {
   end,
   desc = "Mark current position when cursor is held",
 })
+
+vim.diagnostic.config({
+  virtual_text = false,
+  --virtual_text = true,
+  signs = true,
+  underline = true,
+  update_in_insert = false,
+  severity_sort = false,
+})
+
