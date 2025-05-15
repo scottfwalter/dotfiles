@@ -46,7 +46,6 @@ brew "gping"
 brew "groovy"
 brew "guile"
 brew "gum"
-brew "harfbuzz"
 brew "htmlq"
 brew "htop"
 brew "httpie"
@@ -174,6 +173,7 @@ mas "Color Slurp",id: 1287239339
 mas "Color Squid", id: 1057705278
 mas "Daisy Disk", id: 411643860
 mas "Dato", id: 1470584107
+mas "DevHub", id: 6476452351
 mas "Dropover", id: 1355679052
 mas "Final Cut Pro",id: 424389933
 mas "Folder Preview",id: 6698876601
