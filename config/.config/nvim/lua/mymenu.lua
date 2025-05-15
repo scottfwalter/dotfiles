@@ -5,6 +5,7 @@ local function demo_select()
 		"Delete Current Line",
 		"Execute Macro a",
 		"Format File",
+    "Toggle Inline Hints"
 	}
 
 	local prompt = "Please select an option:"
@@ -61,6 +62,9 @@ local function demo_select()
 		elseif choice and choice:match("Format File") then
 			-- Format the file
 			vim.cmd("normal! gg=G")
+		elseif choice and choice:match("Toggle Inline Hints") then
+			-- Format the file
+			vim.cmd(":ToggleHints")
 		end
 	end)
 end
@@ -72,4 +76,4 @@ end, {})
 
 vim.keymap.set("n", "<leader>m", function()
 	demo_select()
-end, { desc = "Show selection menu" })
+end, { desc = "My Menu" })

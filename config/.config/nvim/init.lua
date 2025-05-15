@@ -13,6 +13,6 @@ vim.opt.rtp:prepend(lazypath)
 
 require("vim-options")
 require("help-panel")
-require("scott-popup")
+require("mymenu")
 require("lazy").setup("plugins")
 
