@@ -1,6 +1,31 @@
-[user]
-	name = Scott Walter
-	email = scott@scottwalter.com
+[alias]
+	add-commit = !git add -A && git commit -m
+	alias = ! git config --get-regexp ^alias\\. | sed -e s/^alias\\.// -e s/\\ /\\ =\\ /
+	br = branch
+	branches = for-each-ref --sort=-committerdate --format=\"%(color:blue)%(authordate:relative)\t%(color:red)%(authorname)\t%(color:white)%(color:bold)%(refname:short)\" refs/remotes
+	cleanup = clean -f -d
+	co = checkout
+	ct = commit
+	fetch-main = !git fetch origin main && git merge origin/main
+	fetch-master = !git fetch origin master && git merge origin/master
+	fetch-merge = !git fetch origin master && git merge origin/master
+	get-remote = config --get remote.origin.url
+	hist = log --pretty=format:'%h %ad | %s%d [%an]' --graph --date=short
+  logs = log --graph --oneline --decorate --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset'
+	set-remote = remote set-url origin
+	st = status
+	unpushed = !GIT_CURRENT_BRANCH=$(git name-rev --name-only HEAD) && git log origin/$GIT_CURRENT_BRANCH..$GIT_CURRENT_BRANCH --oneline
+  wip = !git add . && git commit --no-verify -m \"wip\"
+  yesterday = log --since='yesterday midnight' --until='midnight' --all --no-merges --oneline --author=scott@scottwalter.com
+[branch]
+  sort = -committerdate
+
+[color "decorate"]
+  HEAD = red
+  branch = blue
+  tag = yellow
+  remoteBranch = magenta
+
 [core]
 	quotepath = false
 	autocrlf = false
@@ -8,9 +33,8 @@
 	hooksPath = ~/.git-hooks
 	excludesfile = ~/.gitignore
 
-
-[merge]
-	conflictstyle = diff3
+[credential]
+	helper = osxkeychain
 
 [diff]
         tool = difftastic
@@ -21,39 +45,12 @@
 [difftool "difftastic"]
         cmd = difft "$LOCAL" "$REMOTE"
 
-[pager]
-        difftool = true
-
-
-[alias]
-	alias = ! git config --get-regexp ^alias\\. | sed -e s/^alias\\.// -e s/\\ /\\ =\\ /
-	br = branch
-	branches = for-each-ref --sort=-committerdate --format=\"%(color:blue)%(authordate:relative)\t%(color:red)%(authorname)\t%(color:white)%(color:bold)%(refname:short)\" refs/remotes
-	co = checkout
-	ct = commit
-	hist = log --pretty=format:'%h %ad | %s%d [%an]' --graph --date=short
-	st = status
-	unpushed = !GIT_CURRENT_BRANCH=$(git name-rev --name-only HEAD) && git log origin/$GIT_CURRENT_BRANCH..$GIT_CURRENT_BRANCH --oneline
-	get-remote = config --get remote.origin.url
-	set-remote = remote set-url origin
-	fetch-merge = !git fetch origin master && git merge origin/master
-	fetch-master = !git fetch origin master && git merge origin/master
-	fetch-main = !git fetch origin main && git merge origin/main
-	logs = log --graph --oneline --decorate --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset'
-	add-commit = !git add -A && git commit -m
-	cleanup = clean -f -d
-	wip = !git add . && git commit --no-verify -m \"wip\"
-
-[push]
-	default = matching
-	autoSetupRemote = true
 [filter "lfs"]
 	clean = git-lfs clean -- %f
 	smudge = git-lfs smudge -- %f
 	process = git-lfs filter-process
 	required = true
-[credential]
-	helper = osxkeychain
+
 [init]
 	defaultBranch = main
 
@@ -61,4 +58,36 @@
 	path = ~/.gitconfig-nice
 
 [includeIf "hasconfig:remote.*.url:https://scottfwalter:*/scottfwalter/**/*"]
-	path = ~/.gitconfig-personal
+  path = ~/.gitconfig-personal
+
+[log]
+  abbrevCommit = true
+  graphColors = blue, yellow, cyan, magenta, green, red
+
+[merge]
+	conflictstyle = diff3
+
+[pager]
+  difftool = true
+
+[pull]
+  rebase = false
+  ff = only
+  default = current
+
+[push]
+  default = current
+  autoSetupRemote = true
+  followTags = true
+
+[status]
+  showUntrackedFiles = all
+  branch = true
+  showStatus = true
+
+[tag]
+sort = -taggerdate
+
+[user]
+	name = Scott Walter
+	email = scott@scottwalter.com
