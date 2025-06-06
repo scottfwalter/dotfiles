@@ -1,5 +1,6 @@
 #!/usr/bin/env node
 
+// find . -name "*.md" -print0 | xargs -0 -I {} -n1 node ~/bin/frontmatter.js "{}" "{}" add Genre "Star Wars"
 const fs = require('fs');
 const path = require('path');
 
@@ -11,7 +12,7 @@ const path = require('path');
 function parseFrontMatter(content) {
     const frontMatterRegex = /^---\s*\n([\s\S]*?)\n---\s*\n([\s\S]*)$/;
     const match = content.match(frontMatterRegex);
-    
+
     if (!match) {
         return {
             frontMatter: {},
@@ -19,11 +20,11 @@ function parseFrontMatter(content) {
             hasFrontMatter: false
         };
     }
-    
+
     const yamlContent = match[1];
     const body = match[2];
     const frontMatter = parseYaml(yamlContent);
-    
+
     return {
         frontMatter,
         body,
@@ -39,19 +40,19 @@ function parseFrontMatter(content) {
 function parseYaml(yaml) {
     const result = {};
     const lines = yaml.split('\n');
-    
+
     for (const line of lines) {
         const trimmed = line.trim();
         if (!trimmed || trimmed.startsWith('#')) continue;
-        
+
         const colonIndex = trimmed.indexOf(':');
         if (colonIndex === -1) continue;
-        
+
         const key = trimmed.substring(0, colonIndex).trim();
         let value = trimmed.substring(colonIndex + 1).trim();
-        
+
         // Handle quoted strings
-        if ((value.startsWith('"') && value.endsWith('"')) || 
+        if ((value.startsWith('"') && value.endsWith('"')) ||
             (value.startsWith("'") && value.endsWith("'"))) {
             value = value.slice(1, -1);
         }
@@ -69,10 +70,10 @@ function parseYaml(yaml) {
         else if (!isNaN(value) && !isNaN(parseFloat(value))) {
             value = parseFloat(value);
         }
-        
+
         result[key] = value;
     }
-    
+
     return result;
 }
 
@@ -83,7 +84,7 @@ function parseYaml(yaml) {
  */
 function objectToYaml(obj) {
     const lines = [];
-    
+
     for (const [key, value] of Object.entries(obj)) {
         if (Array.isArray(value)) {
             lines.push(`${key}: [${value.map(item => `"${item}"`).join(', ')}]`);
@@ -93,7 +94,7 @@ function objectToYaml(obj) {
             lines.push(`${key}: ${value}`);
         }
     }
-    
+
     return lines.join('\n');
 }
 
@@ -107,7 +108,7 @@ function objectToYaml(obj) {
  */
 function performAction(frontMatter, action, property, value) {
     const updated = { ...frontMatter };
-    
+
     switch (action.toLowerCase()) {
         case 'add':
             if (!value) {
@@ -115,7 +116,7 @@ function performAction(frontMatter, action, property, value) {
             }
             updated[property] = value;
             break;
-            
+
         case 'update':
             if (!value) {
                 throw new Error('Value is required for "update" action');
@@ -125,7 +126,7 @@ function performAction(frontMatter, action, property, value) {
             }
             updated[property] = value;
             break;
-            
+
         case 'delete':
             if (!(property in updated)) {
                 console.warn(`Warning: Property "${property}" does not exist.`);
@@ -133,11 +134,11 @@ function performAction(frontMatter, action, property, value) {
                 delete updated[property];
             }
             break;
-            
+
         default:
             throw new Error(`Invalid action: ${action}. Valid actions are: add, update, delete`);
     }
-    
+
     return updated;
 }
 
@@ -146,7 +147,7 @@ function performAction(frontMatter, action, property, value) {
  */
 function main() {
     const args = process.argv.slice(2);
-    
+
     // Validate arguments
     if (args.length < 4) {
         console.error('Usage: node frontmatter-editor.js <input-file> <output-file> <action> <property> [value]');
@@ -164,36 +165,36 @@ function main() {
         console.error('  node frontmatter-editor.js input.md output.md delete draft');
         process.exit(1);
     }
-    
+
     const [inputFile, outputFile, action, property, value] = args;
-    
+
     // Validate action
     const validActions = ['add', 'update', 'delete'];
     if (!validActions.includes(action.toLowerCase())) {
         console.error(`Error: Invalid action "${action}". Valid actions are: ${validActions.join(', ')}`);
         process.exit(1);
     }
-    
+
     // Validate value requirement
     if ((action.toLowerCase() === 'add' || action.toLowerCase() === 'update') && !value) {
         console.error(`Error: Value is required for "${action}" action`);
         process.exit(1);
     }
-    
+
     try {
         // Read input file
         if (!fs.existsSync(inputFile)) {
             throw new Error(`Input file does not exist: ${inputFile}`);
         }
-        
+
         const content = fs.readFileSync(inputFile, 'utf8');
-        
+
         // Parse front matter
         const { frontMatter, body, hasFrontMatter } = parseFrontMatter(content);
-        
+
         // Perform action
         const updatedFrontMatter = performAction(frontMatter, action, property, value);
-        
+
         // Reconstruct the file
         let newContent;
         if (Object.keys(updatedFrontMatter).length > 0) {
@@ -206,18 +207,18 @@ function main() {
             // If no front matter existed and we're adding empty front matter
             newContent = content;
         }
-        
+
         // Write output file
         const outputDir = path.dirname(outputFile);
         if (!fs.existsSync(outputDir)) {
             fs.mkdirSync(outputDir, { recursive: true });
         }
-        
+
         fs.writeFileSync(outputFile, newContent, 'utf8');
-        
+
         console.log(`Successfully ${action}ed property "${property}" in ${inputFile}`);
         console.log(`Output written to: ${outputFile}`);
-        
+
     } catch (error) {
         console.error(`Error: ${error.message}`);
         process.exit(1);
