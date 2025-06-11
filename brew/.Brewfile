@@ -149,6 +149,7 @@ cask "makemkv", args: { appdir: "/Applications" }
 cask "monitorcontrol"
 cask "moom", args: { appdir: "/Applications" }
 cask "ollama"
+cask "orbstack"
 cask "onyx", args: { appdir: "/Applications" }
 cask "plex", args: { appdir: "/Applications" }
 cask "private-internet-access"
