@@ -237,3 +237,4 @@ fi
 
 # Added by LM Studio CLI (lms)
 export PATH="$PATH:/Users/scott/.lmstudio/bin"
+alias claude="/Users/scott/.claude/local/claude"
