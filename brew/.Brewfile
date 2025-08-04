@@ -206,6 +206,7 @@ mas "OmniGraffle", id: 1142578753
 mas "PDF Gear", id: 6469021132
 mas "PDF Viewer", id: 1120099014
 mas "Paprika", id: 1303222628
+mas "Perplexity", id: 6714467650
 mas "Photomator", id: 1444636541
 mas "Photoresize Pro", id:536956866
 mas "Pixelmator Pro", id: 1289583905
