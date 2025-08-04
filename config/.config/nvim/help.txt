@@ -1,0 +1,17 @@
+Neo Tree File System {leader}e
+
+Buffers {leader}fb
+Find files {leader}ff
+Grep files {leader}/
+Grep buffers {leader}sB
+
+Previous opened files {leader}fr
+
+LazyGit {leader}lg
+
+New Terminal C-t
+Select Terminal {leader}tt
+
+Trouble
+  All files {leader}xx
+

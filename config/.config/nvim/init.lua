@@ -1,6 +1,9 @@
 require("core.options") -- Load general options
 require("core.keymaps") -- Load general keymaps
 require("core.snippets") -- Custom code snippets
+require("core.help-panel") -- Help panel for NeoVim
+require("core.mymenu") -- Custom menu for NeoVim
+require("core.macros") -- Macros for NeoVim
 
 -- Set up the Lazy plugin manager
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
@@ -30,7 +33,7 @@ require("lazy").setup({
 	require("plugins.indent-blankline"),
 	require("plugins.misc"),
 	require("plugins.comment"),
-	require("plugins.completions"),
+	--require("plugins.completions"),
 	require("plugins.ghcopilot"),
 	require("plugins.lazygit"),
 	require("plugins.mini-indent"),

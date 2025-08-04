@@ -1,0 +1,28 @@
+{
+  "errclass": {
+    "prefix": "errclass",
+    "body": [
+      "export class ${1:MyCustom}Error extends Error {",
+      " constructor() {",
+      "   super ('${2:My Error Message}') ",
+      "   this. name = '${1:MyCustom}Error'",
+      "   this.code = '${3:MY_CUSTOM}'",
+      " }",
+      "}"
+    ]
+  },
+  "scott": {
+    "prefix": "scott",
+    "body": [
+      "const scott = {",
+      "  name: 'Scott',",
+      "  age: 30,",
+      "  job: 'Developer',",
+      "  hobbies: ['coding', 'reading'],",
+      "  greet() {",
+      "    console.log(`Hello, my name is ${this.name}`);",
+      "  }",
+      "};"
+    ]
+  }
+}
