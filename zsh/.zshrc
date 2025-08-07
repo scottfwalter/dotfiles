@@ -237,4 +237,13 @@ fi
 
 # Added by LM Studio CLI (lms)
 export PATH="$PATH:/Users/scott/.lmstudio/bin"
-alias claude="/Users/scott/.claude/local/claude"
+#alias claude="/Users/scott/.claude/local/claude"
+
+
+
+export PATH="$PATH:/Users/scott/.claude/local/"
+if [ -f ~/.secrets.sh ]; then
+  source ~/.secrets.sh
+fi
+
+

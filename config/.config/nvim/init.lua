@@ -43,6 +43,7 @@ require("lazy").setup({
 	require("plugins.trouble"),
 	require("plugins.better-term"),
 	require("plugins.snacks"),
+	require("plugins.claudecode"),
 })
 
 -- The line beneath this is called `modeline`. See `:help modeline`
