@@ -1,0 +1,6 @@
+{"type":"summary","summary":"Sample API Device Info Retrieval","leafUuid":"cccd3cba-6141-4dbc-bbaf-cdde34a9d4f2"}
+{"type":"summary","summary":"Weather API Context Generation and Details","leafUuid":"79fe7e6b-dc1c-4738-90e5-6ae6ab7e6281"}
+{"parentUuid":null,"isSidechain":false,"userType":"external","cwd":"/Users/scott/tmp/a1","sessionId":"bbbab807-7232-45e2-9347-89839dc5ca13","version":"1.0.70","gitBranch":"","type":"user","message":{"role":"user","content":"sample apio"},"uuid":"7431a5d3-8d9f-46f0-98f8-70849ac4e49d","timestamp":"2025-08-07T01:52:36.915Z"}
+{"type":"summary","summary":"Sample API Weather Forecast Context Generation","leafUuid":"0c8c8a93-04d2-4e8f-80e1-8101bbcac8de"}
+{"type":"summary","summary":"Weather API Sample with Context 7 Endpoints","leafUuid":"ad37cc74-cbc1-44c7-ae5e-0cd8745d076d"}
+{"type":"summary","summary":"Context 7 Weather API Generation and Details","leafUuid":"661b0435-2382-4183-a8a3-58cb1e65288e"}

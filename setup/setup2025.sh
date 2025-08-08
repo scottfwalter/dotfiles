@@ -2,9 +2,9 @@
 # keep-alive to update existing `sudo` time stamp until script has finished
 sudo -v
 while true; do
-  sudo -n true
-  sleep 60
-  kill -0 "$$" || exit
+    sudo -n true
+    sleep 60
+    kill -0 "$$" || exit
 done 2>/dev/null &
 
 # Command Line utils
@@ -12,37 +12,37 @@ xcode-select --install
 
 # Fast Node Manager (fnm)
 if ! [ -x "$(command -v fnm)" ]; then
-  curl -fsSL https://fnm.vercel.app/install | bash
-  echo "Pleas reload shell and run this script again"
-  exit 1
+    curl -fsSL https://fnm.vercel.app/install | bash
+    echo "Pleas reload shell and run this script again"
+    exit 1
 else
-  fnm install --latest
+    fnm install --latest
 fi
 
 # Brew
 if ! command -v brew &>/dev/null; then
-  /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-  brew eval
+    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+    brew eval
 else
-  echo "Brew already installed skipping."
+    echo "Brew already installed skipping."
 fi
 
 # Get dotfiles
 if [[ ! -d "$HOME/dotfiles" ]]; then
-  git clone https://github.com/scottfwalter/dotfiles.git ~/dotfiles
+    git clone https://github.com/scottfwalter/dotfiles.git ~/dotfiles
 else
-  echo "~/dotfiles exists, pulling latest."
-  git pull
+    echo "~/dotfiles exists, pulling latest."
+    git pull
 fi
 
 # Initialize Dot Files
 if ! command -v brew &>/dev/null; then
-  brew install stow
+    brew install stow
 else
-  echo "Stow already installed skipping."
+    echo "Stow already installed skipping."
 fi
 
-/opt/homebrew/bin/stow -d ~/dotfiles -t ~/ bash bin brew config csh duckdns finicky git prettier sh ssh tcsh tmux vim zsh
+/opt/homebrew/bin/stow -d ~/dotfiles -t ~/ bash bin brew config csh duckdns finicky git prettier sh ssh tcsh tmux vim zsh claude
 
 # Install packages
 brew bundle --global
@@ -50,7 +50,7 @@ brew bundle --global
 echo -e "Installing npm packages..."
 
 while read p; do
-  npm install -g $p
+    npm install -g $p
 done <./npm-packages.lst
 
 # create LaunchAgents dir
@@ -291,12 +291,12 @@ mkdir -p ~/.ssh
 ##########
 
 for app in "Activity Monitor" \
-  "Dock" \
-  "Finder" \
-  "Safari" \
-  "SystemUIServer" \
-  "TextEdit"; do
-  killall "${app}" &>/dev/null
+    "Dock" \
+    "Finder" \
+    "Safari" \
+    "SystemUIServer" \
+    "TextEdit"; do
+    killall "${app}" &>/dev/null
 done
 
 exit 0

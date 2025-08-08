@@ -1,0 +1,44 @@
+[
+  {
+    "content": "Explore repository structure",
+    "status": "in_progress",
+    "priority": "high",
+    "id": "1"
+  },
+  {
+    "content": "Identify build, lint and test commands",
+    "status": "pending",
+    "priority": "high",
+    "id": "2"
+  },
+  {
+    "content": "Understand high-level architecture",
+    "status": "pending",
+    "priority": "high",
+    "id": "3"
+  },
+  {
+    "content": "Check for existing CLAUDE.md file",
+    "status": "completed",
+    "priority": "medium",
+    "id": "4"
+  },
+  {
+    "content": "Check for README.md and important information",
+    "status": "in_progress",
+    "priority": "medium",
+    "id": "5"
+  },
+  {
+    "content": "Check for Cursor rules or Copilot instructions",
+    "status": "pending",
+    "priority": "medium",
+    "id": "6"
+  },
+  {
+    "content": "Create CLAUDE.md file",
+    "status": "pending",
+    "priority": "high",
+    "id": "7"
+  }
+]

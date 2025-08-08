@@ -1,0 +1,22 @@
+[
+  {
+    "content": "Modify ngOnChanges() method in icon.component.ts to detect and handle SVG strings",
+    "status": "completed",
+    "id": "1"
+  },
+  {
+    "content": "Add comprehensive unit tests for SVG string functionality",
+    "status": "completed",
+    "id": "2"
+  },
+  {
+    "content": "Update Storybook examples to demonstrate SVG string usage",
+    "status": "completed",
+    "id": "3"
+  },
+  {
+    "content": "Test the implementation with the provided example SVG",
+    "status": "completed",
+    "id": "4"
+  }
+]

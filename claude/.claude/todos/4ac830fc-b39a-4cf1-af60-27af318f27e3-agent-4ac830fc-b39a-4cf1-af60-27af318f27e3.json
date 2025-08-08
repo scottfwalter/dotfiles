@@ -1,0 +1,22 @@
+[
+  {
+    "content": "Investigate rating component imports and dependencies",
+    "status": "completed",
+    "id": "1"
+  },
+  {
+    "content": "Check rating component's ng-package.json configuration",
+    "status": "completed",
+    "id": "2"
+  },
+  {
+    "content": "Fix import paths or configuration to resolve rootDir errors",
+    "status": "completed",
+    "id": "3"
+  },
+  {
+    "content": "Test the build to ensure errors are resolved",
+    "status": "in_progress",
+    "id": "4"
+  }
+]
