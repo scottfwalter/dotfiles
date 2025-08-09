@@ -1,8 +1,8 @@
 Neo Tree File System {leader}e
 
 Buffers {leader}fb
-Find files {leader}ff
-Grep files {leader}/
+Find files {leader}sf
+Grep files {leader}sg
 Grep buffers {leader}sB
 
 Previous opened files {leader}fr
