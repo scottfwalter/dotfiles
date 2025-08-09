@@ -44,6 +44,7 @@ require("lazy").setup({
 	require("plugins.better-term"),
 	require("plugins.snacks"),
 	require("plugins.claudecode"),
+	require("plugins.vim-suda"),
 })
 
 -- The line beneath this is called `modeline`. See `:help modeline`
