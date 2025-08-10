@@ -214,6 +214,7 @@ mas "QR Capture", id: 1369524274
 mas "Secure Shell Fish", id: 1336634154
 mas "Sharebot", id: 1597340986
 mas "Shareful", id: 1522267256
+mas "Snippety", id: 1530751461
 mas "Spark",id: 6445813049
 mas "Subtrack", id: 1519946553
 mas "The Unarchiver",id: 425424353
