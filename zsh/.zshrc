@@ -242,8 +242,8 @@ export PATH="$PATH:/Users/scott/.lmstudio/bin"
 
 
 export PATH="$PATH:/Users/scott/.claude/local/"
-if [ -f ~/.secrets.sh ]; then
-  source ~/.secrets.sh
-fi
+# if [ -f ~/.secrets.sh ]; then
+#   source ~/.secrets.sh
+# fi
 
 
