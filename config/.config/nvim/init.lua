@@ -4,6 +4,7 @@ require("core.snippets") -- Custom code snippets
 require("core.help-panel") -- Help panel for NeoVim
 require("core.mymenu") -- Custom menu for NeoVim
 require("core.macros") -- Macros for NeoVim
+require("core.commands") -- Custom commands
 
 -- Set up the Lazy plugin manager
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
@@ -44,26 +45,26 @@ require("lazy").setup({
 	require("plugins.claudecode"),
 	require("plugins.vim-suda"),
 }, {
-	performance = {
-		cache = {
-			enabled = true,
-		},
-		reset_packpath = true,
-		rtp = {
-			reset = true,
-			paths = {},
-			disabled_plugins = {
-				"gzip",
-				"matchit",
-				"matchparen",
-				"netrwPlugin",
-				"tarPlugin",
-				"tohtml",
-				"tutor",
-				"zipPlugin",
-			},
-		},
-	},
+	-- performance = {
+	-- 	cache = {
+	-- 		enabled = true,
+	-- 	},
+	-- 	reset_packpath = true,
+	-- 	rtp = {
+	-- 		reset = true,
+	-- 		paths = {},
+	-- 		disabled_plugins = {
+	-- 			"gzip",
+	-- 			"matchit",
+	-- 			"matchparen",
+	-- 			"netrwPlugin",
+	-- 			"tarPlugin",
+	-- 			"tohtml",
+	-- 			"tutor",
+	-- 			"zipPlugin",
+	-- 		},
+	-- 	},
+	-- },
 })
 
 -- The line beneath this is called `modeline`. See `:help modeline`
