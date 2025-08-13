@@ -17,13 +17,13 @@ return {
 			end,
 			desc = "Smart Find Files",
 		},
-		{
-			"<leader>,",
-			function()
-				require("snacks").picker.buffers()
-			end,
-			desc = "Buffers",
-		},
+		-- {
+		-- 	"<leader>,",
+		-- 	function()
+		-- 		require("snacks").picker.buffers()
+		-- 	end,
+		-- 	desc = "Buffers",
+		-- },
 		{
 			"<leader>/",
 			function()

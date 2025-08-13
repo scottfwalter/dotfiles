@@ -19,7 +19,6 @@ vim.opt.rtp:prepend(lazypath)
 -- Set up plugins
 require("lazy").setup({
 	require("plugins.neotree"),
-	--require("plugins.colortheme"),
 	require("plugins.catppuccin"),
 	require("plugins.bufferline"),
 	require("plugins.lualine"),
@@ -33,7 +32,6 @@ require("lazy").setup({
 	require("plugins.indent-blankline"),
 	require("plugins.misc"),
 	require("plugins.comment"),
-	--require("plugins.completions"),
 	require("plugins.ghcopilot"),
 	require("plugins.lazygit"),
 	require("plugins.mini-indent"),
@@ -45,6 +43,27 @@ require("lazy").setup({
 	require("plugins.snacks"),
 	require("plugins.claudecode"),
 	require("plugins.vim-suda"),
+}, {
+	performance = {
+		cache = {
+			enabled = true,
+		},
+		reset_packpath = true,
+		rtp = {
+			reset = true,
+			paths = {},
+			disabled_plugins = {
+				"gzip",
+				"matchit",
+				"matchparen",
+				"netrwPlugin",
+				"tarPlugin",
+				"tohtml",
+				"tutor",
+				"zipPlugin",
+			},
+		},
+	},
 })
 
 -- The line beneath this is called `modeline`. See `:help modeline`
