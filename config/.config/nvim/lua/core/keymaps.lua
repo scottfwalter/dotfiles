@@ -108,3 +108,11 @@ vim.api.nvim_set_keymap("c", "<Up>", 'v:lua.get_wildmenu_key("<left>", "<up>")',
 function _G.get_wildmenu_key(key_wildmenu, key_regular)
 	return vim.fn.wildmenumode() ~= 0 and key_wildmenu or key_regular
 end
+
+vim.keymap.set("n", "<leader>qa", function()
+	vim.cmd('caddexpr expand("%") . ":" . line(".") . ":" . getline(".")')
+end, { desc = "Add current line to quickfix" })
+vim.keymap.set("n", "<leader>ql", ":copen<CR>", { desc = "Open Quick Fix List" })
+vim.keymap.set("n", "<leader>qc", ":cclose<CR>", { desc = "Close Quick Fix List" })
+vim.keymap.set("n", "<leader>qx", ":cexpr []<CR>", { desc = "Clear Quick Fix List" })
+vim.keymap.set("n", "<leader>qd", ":lua vim.diagnostic.setqflist()<CR>", { desc = "Add diagnostics to Quick Fix List" })
