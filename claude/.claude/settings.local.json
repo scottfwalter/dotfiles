@@ -1,5 +1,4 @@
 {
-  "enableAllProjectMcpServers": false,
   "permissions": {
     "allow": [
       "Bash(grep:*)",
@@ -23,5 +22,9 @@
       "WebFetch(domain:docs.anthropic.com)"
     ],
     "deny": []
-  }
+  },
+  "enableAllProjectMcpServers": true,
+  "enabledMcpjsonServers": [
+    "mcp-atlassian"
+  ]
 }

@@ -105,9 +105,9 @@ vim.keymap.set("n", "<leader>gt", ":Gitsigns toggle_current_line_blame<CR>", {})
 -- Use arrow keys inside of choice lists instead of tab
 vim.api.nvim_set_keymap("c", "<Down>", 'v:lua.get_wildmenu_key("<right>", "<down>")', { expr = true })
 vim.api.nvim_set_keymap("c", "<Up>", 'v:lua.get_wildmenu_key("<left>", "<up>")', { expr = true })
--- function _G.get_wildmenu_key(key_wildmenu, key_regular)
--- 	return vim.fn.wildmenumode() ~= 0 and key_wildmenu or key_regular
--- end
+function _G.get_wildmenu_key(key_wildmenu, key_regular)
+	return vim.fn.wildmenumode() ~= 0 and key_wildmenu or key_regular
+end
 
 vim.keymap.set("n", "<leader>qa", function()
 	vim.cmd('caddexpr expand("%") . ":" . line(".") . ":" . getline(".")')
