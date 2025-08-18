@@ -9,3 +9,4 @@ window-padding-balance = true
 window-save-state = always
 window-colorspace = "display-p3"
 confirm-close-surface = false
+keybind = shift+enter=text:\n
