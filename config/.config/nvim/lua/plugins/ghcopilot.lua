@@ -8,12 +8,11 @@ return {
 		build = "make tiktoken", -- Only on MacOS or Linux
 		opts = {
 			-- See Configuration section for options
-			mappings = {
-				complete = {
-					insert = "<C-Space>",
-					--insert = "<Tab>",
-				},
-			},
+			-- mappings = {
+			-- 	complete = {
+			-- 		insert = "<C-a>", -- Now mapped to Ctrl+L instead of Ctrl+Y
+			-- 	},
+			-- },
 			window = {
 				layout = "vertical",
 				width = 0.3,

@@ -116,3 +116,6 @@ vim.keymap.set("n", "<leader>ql", ":copen<CR>", { desc = "Open Quick Fix List" }
 vim.keymap.set("n", "<leader>qc", ":cclose<CR>", { desc = "Close Quick Fix List" })
 vim.keymap.set("n", "<leader>qx", ":cexpr []<CR>", { desc = "Clear Quick Fix List" })
 vim.keymap.set("n", "<leader>qd", ":lua vim.diagnostic.setqflist()<CR>", { desc = "Add diagnostics to Quick Fix List" })
+
+vim.g.copilot_no_tab_map = true
+vim.cmd('imap <silent><script><expr> <C-a> copilot#Accept("\\<CR>")')
