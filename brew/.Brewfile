@@ -156,6 +156,7 @@ cask "onyx", args: { appdir: "/Applications" }
 cask "plex", args: { appdir: "/Applications" }
 cask "private-internet-access"
 cask "qmk-toolbox", args: { appdir: "/Applications" }
+cask "rancher"
 cask "retrobatch", args: { appdir: "/Applications" }
 cask "screenflow", args: { appdir: "/Applications" }
 cask "shortcat"

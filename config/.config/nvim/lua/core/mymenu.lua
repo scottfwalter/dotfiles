@@ -6,6 +6,7 @@ local function demo_select()
 	local lazy_git = "Lazy Git"
 	local toggle_inline_hints = "Toggle Inline Hints"
 	local json_format = "JSON Format"
+	local toggle_terminal = "Terminal"
 
 	local options = {
 		show_folder,
@@ -14,6 +15,7 @@ local function demo_select()
 		lazy_git,
 		toggle_inline_hints,
 		json_format,
+		toggle_terminal,
 	}
 
 	table.sort(options)
@@ -42,6 +44,8 @@ local function demo_select()
 			vim.cmd("CopilotChat")
 		elseif choice:match(json_format) then
 			vim.cmd("%!jq .")
+		elseif choice:match(toggle_terminal) then
+			vim.cmd("lua require('betterTerm').open() ")
 		end
 	end)
 end
