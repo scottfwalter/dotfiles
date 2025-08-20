@@ -35,7 +35,7 @@ local function demo_select()
 		if choice:match(lazy_git) then
 			vim.cmd("LazyGit")
 		elseif choice:match(show_folder) then
-			vim.cmd("!open %:p:h")
+			vim.cmd("silent !open %:p:h")
 		elseif choice:match(format_file) then
 			vim.cmd("normal! gg=G")
 		elseif choice:match(toggle_inline_hints) then
