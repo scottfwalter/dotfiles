@@ -119,3 +119,28 @@ vim.keymap.set("n", "<leader>qd", ":lua vim.diagnostic.setqflist()<CR>", { desc 
 
 vim.g.copilot_no_tab_map = true
 vim.cmd('imap <silent><script><expr> <C-a> copilot#Accept("\\<CR>")')
+
+-- Jumps to matching pair
+vim.keymap.set("n", "mm", "%")
+
+-- Selects until matching pair, ex: `vm` - select until matching pair
+vim.keymap.set("x", "m", "%")
+
+-- Use with operators, ex: `dm` - delete until matching pair
+vim.keymap.set("o", "m", "%")
+
+-- With mini.ai, ex: `yim` - copy inside matching pair
+opts = {
+	custom_textobjects = {
+		m = {
+			{ "%b()", "%b[]", "%b{}" },
+			"^.().*().$",
+		},
+	},
+}
+
+-- Save all and quit (like ZZ, but global)
+vim.keymap.set("n", "ZZ", ":xa<CR>", { noremap = true, silent = true })
+
+-- Quit all without saving (like ZQ, but global)
+vim.keymap.set("n", "ZQ", ":qa!<CR>", { noremap = true, silent = true })
