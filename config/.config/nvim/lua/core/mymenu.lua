@@ -7,6 +7,8 @@ local function demo_select()
 	local toggle_inline_hints = "Toggle Inline Hints"
 	local json_format = "JSON Format"
 	local toggle_terminal = "Terminal"
+	local copy_file_path = "Copy file path to clipboard"
+	local replace_buffer = "Replace buffer with clipboard"
 
 	local options = {
 		show_folder,
@@ -16,6 +18,8 @@ local function demo_select()
 		toggle_inline_hints,
 		json_format,
 		toggle_terminal,
+		copy_file_path,
+		replace_buffer,
 	}
 
 	table.sort(options)
@@ -46,6 +50,10 @@ local function demo_select()
 			vim.cmd("%!jq .")
 		elseif choice:match(toggle_terminal) then
 			vim.cmd("lua require('betterTerm').open() ")
+		elseif choice:match(replace_buffer) then
+			vim.cmd("%d | put +")
+		elseif choice:match(copy_file_path) then
+			vim.cmd("let @+ = expand('%:p')")
 		end
 	end)
 end
