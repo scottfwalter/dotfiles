@@ -1,5 +1,4 @@
 {
-  "enableAllProjectMcpServers": false,
   "permissions": {
     "allow": [
       "Bash(grep:*)",
@@ -24,6 +23,7 @@
     ],
     "deny": []
   },
+  "enableAllProjectMcpServers": false,
   "hooks": {
     "UserPromptSubmit": [
       {
@@ -35,5 +35,6 @@
         ]
       }
     ]
-  }
+  },
+  "model": "sonnet"
 }
