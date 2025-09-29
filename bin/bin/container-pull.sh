@@ -13,5 +13,5 @@ DOCKER_IMAGE="platform-frontend:1.80.0"
 password=$(aws ecr get-login-password --profile ${PROFILE_NAME} --region ${AWS_ECR_REGION})
 #echo $password
 echo $password | container registry login --username AWS --password-stdin ${AWS_ECR_ACCOUNT_NUMBER}.dkr.ecr.${AWS_ECR_REGION}.amazonaws.com
-sleep 2
-container images pull ${AWS_ECR_ACCOUNT_NUMBER}.dkr.ecr.${AWS_ECR_REGION}.amazonaws.com/${DOCKER_IMAGE}
+#sleep 2
+sudo container images pull ${AWS_ECR_ACCOUNT_NUMBER}.dkr.ecr.${AWS_ECR_REGION}.amazonaws.com/${DOCKER_IMAGE}

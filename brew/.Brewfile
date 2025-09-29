@@ -205,7 +205,6 @@ mas "Motion", id: 434290957
 mas "Mp3 Tag", id: 1532597159
 mas "Termix", id: 6739386670
 mas "Obsidian Web Clipper", id: 6720708363
-mas "Obsidian Web Clipper", id:6720708363
 mas "OmniGraffle", id: 1142578753
 mas "PDF Gear", id: 6469021132
 mas "PDF Viewer", id: 1120099014
@@ -215,6 +214,7 @@ mas "Photomator", id: 1444636541
 mas "Photoresize Pro", id:536956866
 mas "Pixelmator Pro", id: 1289583905
 mas "QR Capture", id: 1369524274
+mas "Run Cat", id: 1429033973
 mas "Secure Shell Fish", id: 1336634154
 mas "Sharebot", id: 1597340986
 mas "Shareful", id: 1522267256

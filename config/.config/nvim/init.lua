@@ -44,6 +44,7 @@ require("lazy").setup({
 	require("plugins.snacks"),
 	require("plugins.claudecode"),
 	require("plugins.vim-suda"),
+	require("plugins.markdown"),
 }, {
 	-- performance = {
 	-- 	cache = {
