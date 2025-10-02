@@ -80,5 +80,34 @@ return {
 				end
 			end,
 		})
+
+		local null_ls = require("null-ls")
+
+		-- Toggle function
+		local function toggle_prettier()
+			local sources2 = null_ls.get_sources()
+			local prettier_enabled = false
+
+			for _, source in ipairs(sources2) do
+				if source.name == "prettier" then
+					prettier_enabled = true
+					break
+				end
+			end
+
+			if prettier_enabled then
+				null_ls.disable({ name = "prettier" })
+				print("Prettier disabled")
+			else
+				null_ls.enable({ name = "prettier" })
+				print("Prettier enabled")
+			end
+		end
+
+		-- Create a command
+		vim.api.nvim_create_user_command("TogglePrettier", toggle_prettier, {})
+
+		-- Or bind to a key
+		--vim.keymap.set("n", "<leader>tp", toggle_prettier, { desc = "Toggle Prettier" })
 	end,
 }

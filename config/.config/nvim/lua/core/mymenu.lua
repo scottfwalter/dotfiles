@@ -9,6 +9,7 @@ local function demo_select()
 	local toggle_terminal = "Terminal"
 	local copy_file_path = "Copy file path to clipboard"
 	local replace_buffer = "Replace buffer with clipboard"
+	local toggle_formatting = "Toggle Prettier"
 
 	local options = {
 		show_folder,
@@ -20,6 +21,7 @@ local function demo_select()
 		toggle_terminal,
 		copy_file_path,
 		replace_buffer,
+		toggle_formatting,
 	}
 
 	table.sort(options)
@@ -54,6 +56,8 @@ local function demo_select()
 			vim.cmd("%d | put +")
 		elseif choice:match(copy_file_path) then
 			vim.cmd("let @+ = expand('%:p')")
+		elseif choice:match(toggle_formatting) then
+			vim.cmd("TogglePrettier")
 		end
 	end)
 end
