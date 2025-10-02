@@ -11,7 +11,7 @@ else
 fi
 
 #################################
-# Basic options
+# Basic optionss
 #################################
 setopt AUTO_CD NO_CASE_GLOB GLOB_COMPLETE
 unsetopt correct_all

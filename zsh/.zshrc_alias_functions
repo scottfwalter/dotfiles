@@ -9,6 +9,7 @@ alias edit-git-config="git config --global --edit"
 alias enginx='code /opt/homebrew/etc/nginx/nginx.conf'
 alias eobsidian="code \"/Users/scott/Library/Mobile Documents/iCloud~md~obsidian/Documents/My Second Brain\""
 alias ff="find . -name $1"
+alias g="git-number"
 alias jj='pbpaste | jsonpp | pbcopy'
 alias jjj='pbpaste | jsonpp'
 alias ll="eza --color=always --icons=always --long --group-directories-first --git -l"
