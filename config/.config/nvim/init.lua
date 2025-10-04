@@ -45,6 +45,7 @@ require("lazy").setup({
 	require("plugins.claudecode"),
 	require("plugins.vim-suda"),
 	require("plugins.markdown"),
+	require("plugins.vim-textobj-xmlattr"),
 }, {
 	-- performance = {
 	-- 	cache = {

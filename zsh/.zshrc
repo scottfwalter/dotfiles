@@ -245,3 +245,4 @@ export PATH="$PATH:/Users/scott/.claude/local/"
 # if [ -f ~/.secrets.sh ]; then
 #   source ~/.secrets.sh
 # fi
+eval "$(~/.local/bin/mise activate)"

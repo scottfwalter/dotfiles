@@ -129,7 +129,6 @@ cask "affinity-publisher", args: { appdir: "/Applications" }
 cask "airfoil"
 cask "applite"
 cask "audio-hijack", args: { appdir: "/Applications" }
-cask "avast-security"
 cask "backblaze"
 cask "bunch", args: { appdir: "/Applications" }
 cask "canva"
@@ -190,7 +189,6 @@ mas "Grammarly", id: 1462114288
 mas "Harmony Bridge", id: 1450752761
 mas "Home Designer 3D", id: 955414427
 mas "Hyperducks", id: 6444667067
-mas "Infuse Video Player", id:1136220934
 mas "Kindle", id: 302584613
 mas "Kompressor", id:6468196574
 mas "Logger for Shortcuts",id:1611554653
